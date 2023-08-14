@@ -15,8 +15,7 @@ export const Education = () => {
       <UnorderedList flex={`1 1`}>
         {data.education.map((item, index) => (
           <ListItem key={index} fontSize={11}>
-            <Text>{item.what}</Text>
-            <Text>{item.whereAndWhen}</Text>
+            <Text>{item}</Text>
           </ListItem>
         ))}
       </UnorderedList>
@@ -38,8 +37,7 @@ export const EducationMobile = () => {
       <UnorderedList flex={`1 1`}>
         {data.education.map((item, index) => (
           <ListItem key={index} fontSize={11}>
-            <Text>{item.what}</Text>
-            <Text>{item.whereAndWhen}</Text>
+            <Text>{item}</Text>
           </ListItem>
         ))}
       </UnorderedList>

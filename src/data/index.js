@@ -57,13 +57,15 @@ const data = {
     'Git / Git Hub',
   ],
   education: [
-    { what: 'Hack Reactor', whereAndWhen: 'Los Angeles 2017' },
-    { what: 'M.S. Kinesiology', whereAndWhen: 'CSU Long Beach 2004' },
+    'Hack Reactor Software Engineering Bootcamp, Los Angeles 2017',
+    ' CSU Long Beach - M.S. Kinesiology',
+    ' CSU Long Beach - B.S. Kinesiology',
   ],
 
   personal: [
     'I live outside Fort Worth with my wife, three young children, and our German Shepherd.',
     "When I'm not spending time with my family I enjoy reading, working out, and traveling.",
+    'I was a Police Officer for 13 years before making a career change in 2017.',
   ],
   experience: [
     {

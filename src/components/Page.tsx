@@ -74,7 +74,7 @@ export const Page = () => {
         borderWidth="1px"
         borderColor="lightgray"
         // boxShadow={`5px 5px 10px`}
-        border="1px dashed green"
+        // border="1px dashed green"
       >
         <Header width={width} />
 
@@ -102,7 +102,7 @@ export const Page = () => {
             justify="flext-start"
             spacing={3}
             pl={4}
-            pr={4}
+            pr={8}
             backgroundColor={theme.colors.transparent}
             // border="1px solid red"
           >
@@ -126,7 +126,7 @@ export const Page = () => {
         borderWidth="1px"
         borderColor="lightgray"
         // boxShadow={`5px 5px 10px`}
-        border="1px dashed green"
+        // border="1px dashed green"
       >
         {/* <Header width={width} /> */}
         <HStack w="100%" align="center" justify="center" spacing={0}>

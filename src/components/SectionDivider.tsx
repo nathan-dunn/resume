@@ -13,7 +13,7 @@ export const SectionDivider = ({ bg = 'transparent', my = 1, h = 1 }: SectionDiv
     <Divider
       orientation="horizontal"
       alignSelf="center"
-      w="94%"
+      w="100%"
       h={h}
       bg={bg}
       color="transparent"
