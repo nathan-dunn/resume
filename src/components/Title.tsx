@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, VStack } from '@chakra-ui/react';
+import { Text, VStack, HStack } from '@chakra-ui/react';
 import data from '../data';
 import { theme } from '../styles';
 
@@ -28,6 +28,35 @@ export const Title = () => {
       </Text>
 
       <Text color={theme.colors.dOrange} fontSize={16}>
+        {title}
+      </Text>
+    </VStack>
+  );
+};
+
+export const TitleMobile = () => {
+  return (
+    <VStack
+      h="100px"
+      minH="100px"
+      w="100%"
+      justify="center"
+      align="center"
+      spacing={1}
+      // border="1px solid darkblue"
+    >
+      <Text
+        color={theme.colors.dOrange}
+        fontSize={24}
+        fontFamily={theme.fonts.primaryFontFamily}
+        fontWeight={700}
+        letterSpacing="2px"
+        lineHeight="1.0em"
+      >
+        {name}
+      </Text>
+
+      <Text color={theme.colors.dOrange} fontSize={14}>
         {title}
       </Text>
     </VStack>
