@@ -3,25 +3,25 @@ import { Box } from '@chakra-ui/react';
 import { theme } from '../styles';
 
 interface HeaderProps {
-  width: number;
+  width: string;
 }
 
 export const Header = ({ width }: HeaderProps) => {
   return (
-    <Box w={width} position="absolute" h="140px">
+    <Box width={width} position="absolute" h="185px" overflow="hidden">
       <Box
         width={0}
         height={0}
         position="absolute"
-        zIndex={3}
-        borderTop={`200px solid ${theme.colors.dBlue}`} // bottom-left corner
+        zIndex={8}
+        borderTop={`180px solid ${theme.colors.dBlue}`} // bottom-left corner
         borderRight={`320px solid transparent`}
       />
       <Box
         width={0}
         height={0}
         position="absolute"
-        zIndex={4}
+        zIndex={9}
         borderTop={`150px solid ${theme.colors.dOrange}`} // bottom-right corner
         borderLeft={`630px solid transparent`}
         right={0}

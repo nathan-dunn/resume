@@ -3,13 +3,15 @@ import { mode } from '@chakra-ui/theme-tools';
 
 const chakraGray = '#718096';
 const chakraBlueGray = '#2B3549';
-const red = 'red';
-const white = 'white';
+const white = '#FFF';
 const almostWhite = '#F0F0F0';
-const black = 'black';
-const dBlue = '#3b4358';
-const dOrange = '#bb7563';
+const black = '#000';
+const dBlue = '#3B4358';
+const dOrange = '#BB7563';
 const dGray = '#D8D8D8';
+const primaryFontColor = '#000';
+const secondaryFontColor = '#404040';
+
 const transparent = 'transparent';
 
 export const theme = extendTheme({
@@ -20,7 +22,6 @@ export const theme = extendTheme({
   colors: {
     chakraGray,
     chakraBlueGray,
-    red,
     white,
     black,
     almostWhite,
@@ -28,6 +29,12 @@ export const theme = extendTheme({
     dOrange,
     dGray,
     transparent,
+    primaryFontColor,
+    secondaryFontColor,
+  },
+  fonts: {
+    primaryFontFamily: `'Montserrat', sans-serif`,
+    secondaryFontFamily: `'Nunito', sans-serif`,
   },
   breakpoints: {
     sm: '320px',

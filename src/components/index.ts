@@ -9,3 +9,4 @@ export * from './Profile';
 export * from './SectionDivider';
 export * from './SectionHeader';
 export * from './Skills';
+export * from './Title';

@@ -1,12 +1,20 @@
 import React from 'react';
-import { Flex, Text, UnorderedList, ListItem, List } from '@chakra-ui/react';
+import { Flex, Text, UnorderedList, ListItem, List, VStack } from '@chakra-ui/react';
 import { SectionHeader } from './SectionHeader';
 import { theme } from '../styles';
 import data from '../data';
 
 export const Experience = () => {
   return (
-    <Flex direction="column" flex={`1 0`} width="100%" textAlign="left" pl={4} pr={4}>
+    <VStack
+      flex={`1 0`}
+      width="100%"
+      align="left"
+      pl={4}
+      pr={4}
+      spacing={0}
+      // border="1px solid purple"
+    >
       <SectionHeader color={theme.colors.dOrange} title="WORK EXPERIENCE" />
       <List mt={1}>
         {data.experience.map((job, jobIndex) => (
@@ -37,6 +45,6 @@ export const Experience = () => {
           </ListItem>
         ))}
       </List>
-    </Flex>
+    </VStack>
   );
 };

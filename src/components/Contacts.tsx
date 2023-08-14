@@ -5,7 +5,7 @@ import data from '../data';
 
 export const Contacts = () => {
   return (
-    <VStack maxH="25%" w="100%" px={2} align="flex-start" spacing={0}>
+    <VStack maxH="25%" w="100%" px={2} align="flex-start" spacing={0} zIndex={1}>
       <SectionHeader title="CONTACT" />
 
       {data.contacts.map((contact: any, index: number) => (

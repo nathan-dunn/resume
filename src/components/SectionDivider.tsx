@@ -1,23 +1,21 @@
 import React from 'react';
 import { Divider } from '@chakra-ui/react';
-import { theme } from '../styles';
 
 interface SectionDividerProps {
-  backgroundColor?: string;
+  bg?: string;
   my?: number;
+  h?: number;
 }
 
-export const SectionDivider = ({
-  backgroundColor = theme.colors.dGray,
-  my = 1,
-}: SectionDividerProps) => {
+// can be used as a spacer -- don't pass in bg, and give it the my you want
+export const SectionDivider = ({ bg = 'transparent', my = 1, h = 1 }: SectionDividerProps) => {
   return (
     <Divider
       orientation="horizontal"
       alignSelf="center"
-      h={1}
       w="94%"
-      backgroundColor={backgroundColor}
+      h={h}
+      bg={bg}
       color="transparent"
       my={my}
       border="none"
