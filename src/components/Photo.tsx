@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Stack, VStack, HStack, Image } from '@chakra-ui/react';
+import { Stack, VStack, Image } from '@chakra-ui/react';
 import { theme } from '../styles';
 
 const photos = ['profile.png', 'profile_alt.png'];
@@ -9,7 +9,6 @@ export const Photo = () => {
   return (
     <VStack
       w="100%"
-      // px={2}
       align="center"
       justify="flex-end"
       spacing={0}
@@ -34,12 +33,9 @@ export const PhotoMobile = () => {
   return (
     <Stack
       w="33%"
-      // px={2}
       align="flex-end"
       justify="center"
       spacing={0}
-      // h="185px"
-      // minH="185px"
       h="100%"
       // border="1px solid darkblue"
     >

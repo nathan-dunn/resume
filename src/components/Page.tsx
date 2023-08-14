@@ -62,7 +62,15 @@ export const Page = () => {
   width = '738px';
 
   return !isMobile ? (
-    <Stack ref={windowRef} h="100vh" width="100%" align="center" backgroundColor="#f5f5f5" p={3}>
+    <Stack
+      ref={windowRef}
+      h="100%"
+      width="100%"
+      align="center"
+      backgroundColor="#f5f5f5"
+      p={3}
+      // border="1px dashed orange"
+    >
       <VStack
         ref={pageRef}
         h="100%"
@@ -71,14 +79,17 @@ export const Page = () => {
         spacing={0}
         fontFamily={theme.fonts.secondaryFontFamily}
         color={theme.colors.secondaryFontColor}
+        backgroundColor={theme.colors.dGray}
         borderWidth="1px"
         borderColor="lightgray"
-        // boxShadow={`5px 5px 10px`}
+        p={0}
+        boxShadow={`3px 3px 10px`}
         // border="1px dashed green"
       >
         <Header width={width} />
 
-        <HStack w="100%" h="100%" spacing={0}>
+        {/* LEFT SIDE */}
+        <HStack w="100%" h="100%" spacing={0} minHeight="100%">
           <VStack
             w="31%"
             minW="31%"
@@ -86,7 +97,6 @@ export const Page = () => {
             spacing={5}
             pl={4}
             pr={4}
-            backgroundColor={theme.colors.dGray}
             // border="1px solid red"
           >
             <Photo />
@@ -96,6 +106,7 @@ export const Page = () => {
             <Personal />
           </VStack>
 
+          {/* RIGHT SIDE */}
           <VStack
             w="100%"
             h="100%"
@@ -103,7 +114,7 @@ export const Page = () => {
             spacing={3}
             pl={4}
             pr={8}
-            backgroundColor={theme.colors.transparent}
+            backgroundColor={theme.colors.white}
             // border="1px solid red"
           >
             <Title />
