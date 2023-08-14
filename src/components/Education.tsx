@@ -5,7 +5,12 @@ import { SectionHeader } from './SectionHeader';
 
 export const Education = () => {
   return (
-    <VStack maxH="25%" w="100%" px={2} align="flex-start" spacing={0}>
+    <VStack
+      w="100%"
+      align="flex-start"
+      spacing={0}
+      // border="1px solid darkblue"
+    >
       <SectionHeader title="EDUCATION" />
       <UnorderedList flex={`1 1`}>
         {data.education.map((item, index) => (

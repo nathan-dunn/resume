@@ -9,17 +9,17 @@ export const Title = () => {
   return (
     <VStack
       h="160px"
+      minH="160px"
       w="100%"
-      color={theme.colors.dOrange}
       justify="flex-end"
       align="flex-start"
-      px={4}
       spacing={1}
-      // border="1px solid blue"
+      // border="1px solid darkblue"
     >
       <Text
-        fontFamily={theme.fonts.primaryFontFamily}
+        color={theme.colors.dOrange}
         fontSize={32}
+        fontFamily={theme.fonts.primaryFontFamily}
         fontWeight={700}
         letterSpacing="2px"
         lineHeight="1.0em"
@@ -27,7 +27,9 @@ export const Title = () => {
         {name}
       </Text>
 
-      <Text fontSize={16}>{title}</Text>
+      <Text color={theme.colors.dOrange} fontSize={16}>
+        {title}
+      </Text>
     </VStack>
   );
 };

@@ -1,15 +1,20 @@
 import React from 'react';
-import { Flex, Text } from '@chakra-ui/react';
+import { VStack, Text } from '@chakra-ui/react';
 import { SectionHeader } from './SectionHeader';
 import data from '../data';
 
 export const Personal = () => {
   return (
-    <Flex direction="column" flex={`1 1`} width="100%" textAlign="left" px={4}>
+    <VStack
+      w="100%"
+      align="flex-start"
+      spacing={0}
+      // border="1px solid darkblue"
+    >
       <SectionHeader title="PERSONAL" />
       <Text fontSize={11} textAlign="justify">
         {data.personal.join(' ')}
       </Text>
-    </Flex>
+    </VStack>
   );
 };

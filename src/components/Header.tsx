@@ -8,12 +8,16 @@ interface HeaderProps {
 
 export const Header = ({ width }: HeaderProps) => {
   return (
-    <Box width={width} position="absolute" h="185px" overflow="hidden">
+    <Box
+      width={width}
+      position="absolute"
+      // border="1px dashed darkblue"
+    >
       <Box
         width={0}
         height={0}
         position="absolute"
-        zIndex={8}
+        zIndex={3}
         borderTop={`180px solid ${theme.colors.dBlue}`} // bottom-left corner
         borderRight={`320px solid transparent`}
       />
@@ -21,8 +25,8 @@ export const Header = ({ width }: HeaderProps) => {
         width={0}
         height={0}
         position="absolute"
-        zIndex={9}
-        borderTop={`150px solid ${theme.colors.dOrange}`} // bottom-right corner
+        zIndex={4}
+        borderTop={`135px solid ${theme.colors.dOrange}`} // bottom-right corner
         borderLeft={`630px solid transparent`}
         right={0}
       />

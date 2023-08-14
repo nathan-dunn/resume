@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, VStack, HStack, Image, Box } from '@chakra-ui/react';
+import { VStack, HStack, Image } from '@chakra-ui/react';
 import { theme } from '../styles';
 
 const photos = ['profile.png', 'profile_alt.png'];
@@ -7,24 +7,24 @@ const photos = ['profile.png', 'profile_alt.png'];
 export const Photo = () => {
   const [photoIndex, setPhotoIndex] = useState<any>(0);
   return (
-    <Box
+    <VStack
       w="100%"
+      // px={2}
+      align="center"
+      justify="flex-end"
+      spacing={0}
       h="185px"
-      position="relative"
-      backgroundColor={theme.colors.dGray}
-      // border="1px solid hotpink"
+      minH="185px"
+      // border="1px solid darkblue"
     >
       <Image
         borderRadius="full"
         boxSize="145px"
         src={require(`../assets/${photos[photoIndex]}`)}
         alt="profile"
-        position="absolute"
-        zIndex={10}
-        bottom={0}
-        right={10}
+        zIndex={5}
         onClick={() => setPhotoIndex((p: any) => (p === photos.length - 1 ? 0 : p + 1))}
       />
-    </Box>
+    </VStack>
   );
 };

@@ -9,7 +9,12 @@ export const Skills = () => {
   const list2 = data.skills.slice(part);
 
   return (
-    <VStack w="100%" px={2} align="flex-start" spacing={0}>
+    <VStack
+      w="100%"
+      align="flex-start"
+      spacing={0}
+      // border="1px solid darkblue"
+    >
       <SectionHeader title="TECH SKILLS + TOOLS" />
 
       <Stack direction="row">

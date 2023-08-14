@@ -51,7 +51,8 @@ export const Page = () => {
   const isMobile = !!useIsMobile();
   const windowRef = useRef<any>(null);
   const pageRef = useRef<any>(null);
-  const width: string = '768px';
+  let width: string = '768px';
+  width = '738px';
 
   return (
     <Stack ref={windowRef} h="100vh" width="100vw" align="center" backgroundColor="#f5f5f5" p={3}>
@@ -72,13 +73,14 @@ export const Page = () => {
 
           <HStack w="100%" h="100%" spacing={0}>
             <VStack
-              w="30%"
+              w="31%"
+              minW="31%"
               h="100%"
               spacing={5}
-              pl={2}
-              pr={1}
+              pl={4}
+              pr={4}
               backgroundColor={theme.colors.dGray}
-              // border="1px solid blue"
+              // border="1px solid red"
             >
               <Photo />
               <Contacts />
@@ -88,17 +90,17 @@ export const Page = () => {
             </VStack>
 
             <VStack
-              w="70%"
+              w="100%"
               h="100%"
               justify="flext-start"
               spacing={3}
-              pl={1}
-              pr={5}
+              pl={4}
+              pr={4}
               backgroundColor={theme.colors.transparent}
               // border="1px solid red"
             >
               <Title />
-              <SectionDivider bg={theme.colors.dGray} />
+              <SectionDivider bg={theme.colors.dGray} my={1.5} />
               <Experience />
             </VStack>
           </HStack>
@@ -109,20 +111,50 @@ export const Page = () => {
           h="100%"
           width={width}
           overflow="auto"
-          spacing={0}
+          spacing={5}
           fontFamily={theme.fonts.secondaryFontFamily}
           borderWidth="1px"
           borderColor="lightgray"
           // boxShadow={`5px 5px 10px`}
         >
-          <Header width={width} />
-          <Photo />
-          <Title />
-          <Contacts />
-          <Education />
-          <Skills />
-          <Personal />
+          {/* <Header width={width} /> */}
+          <HStack>
+            <Photo />
+            <Title />
+            <Contacts />
+          </HStack>
+          <HStack
+            // w="31%"
+            // minW="31%"
+            w="100%"
+            h="100%"
+            spacing={5}
+            align="flex-start"
+            // justify="center"
+            pl={4}
+            pr={4}
+            backgroundColor={theme.colors.dGray}
+            // border="1px solid red"
+          >
+            <Education />
+            <Skills />
+          </HStack>
           <Experience />
+          <VStack
+            // w="31%"
+            // minW="31%"
+            w="100%"
+            h="100%"
+            spacing={5}
+            align="center"
+            // justify="center"
+            pl={4}
+            pr={4}
+            backgroundColor={theme.colors.dGray}
+            // border="1px solid red"
+          >
+            <Personal />
+          </VStack>
         </VStack>
       )}
     </Stack>

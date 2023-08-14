@@ -7,13 +7,12 @@ import data from '../data';
 export const Experience = () => {
   return (
     <VStack
-      flex={`1 0`}
+      height="100%"
       width="100%"
       align="left"
-      pl={4}
-      pr={4}
+      // px={4}
       spacing={0}
-      // border="1px solid purple"
+      // border="1px solid darkblue"
     >
       <SectionHeader color={theme.colors.dOrange} title="WORK EXPERIENCE" />
       <List mt={1}>
