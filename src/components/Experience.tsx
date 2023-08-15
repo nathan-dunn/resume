@@ -21,74 +21,63 @@ export const Experience = () => {
           const {
             project,
             employer,
-            role,
+            title,
             dates,
             description,
             tech,
+            highlights,
           }: {
             project: string;
             employer: string;
-            role: string;
+            title: string;
             dates: string;
             description: string;
             tech: string;
+            highlights: string[];
           } = experience;
 
+          const fontWeight = 700;
+          const fontWeight2 = 500;
+
+          const fontSize1: number = 13;
+          const fontSize2: number = 11;
+
           return (
-            <ListItem key={experienceIndex} mb={6} fontSize={13}>
-              <Flex justify="space-between" fontWeight={600}>
+            <ListItem key={experienceIndex} mb={7}>
+              <Flex justify="space-between" fontSize={fontSize1} fontWeight={fontWeight}>
                 <Text>{project}</Text>
                 <Text>{employer}</Text>
               </Flex>
 
-              <Flex justify="space-between" fontWeight={600}>
-                <Text>{role}</Text>
+              <Flex justify="space-between" fontSize={fontSize1} fontWeight={fontWeight}>
+                <Text>{title}</Text>
                 <Text>{dates}</Text>
               </Flex>
 
               <SectionDivider bg={theme.colors.backgroundColor3} />
-              <Text mb={1}>
-                <Text fontWeight={600} display="inline" mr={1}>
+
+              <Text mb={1} align="justify" fontSize={fontSize2}>
+                <Text fontWeight={fontWeight2} display="inline" mr={1}>
                   Project Description:
                 </Text>
                 {description}
               </Text>
-              <Text fontWeight={600} display="inline" mr={1}>
-                Tech:
+
+              <Text mb={1} align="justify" fontSize={fontSize2}>
+                <Text fontWeight={fontWeight2} display="inline" mr={1}>
+                  Tech:
+                </Text>
+                {tech}
               </Text>
-              {tech}
+
+              {/* <Text mb={1} align="justify" fontSize={fontSize2}>
+                <Text fontWeight={fontWeight2} display="inline" mr={1}>
+                  Highlights:
+                </Text>
+                {highlights.join('; ') + '.'}
+              </Text> */}
             </ListItem>
           );
-          // <ListItem key={experienceIndex}>
-          //   <Flex direction="column" justify="flex-start" mb={1}>
-          //     <Text fontSize={11} fontWeight={700}>
-          //       {`${job.jobTitle.toUpperCase()}`}
-          //     </Text>
-          //     <Flex direction="row" justify="space-between">
-          //       <Text fontSize={11} fontWeight={700}>
-          //         {job.employer.toUpperCase()}
-          //       </Text>
-          //       <Text fontSize={11} fontWeight={700}>
-          //         {job.dates.toUpperCase()}
-          //       </Text>
-          //     </Flex>
-          //   </Flex>
-          //   {/* PROJECTS */}
-          //   <List fontSize={11} mb={4}>
-          //     {job.projects.map((project, projectIndex) => (
-          //       <ListItem key={projectIndex} ml={1} mb={2}>
-          //         {project.projectName && <Text>{project.projectName}</Text>}
-          //         <UnorderedList>
-          //           {project.details.map((detail, detailIndex) => (
-          //             <ListItem key={detailIndex} ml={2}>
-          //               <Text align="justify">{detail}</Text>
-          //             </ListItem>
-          //           ))}
-          //         </UnorderedList>
-          //       </ListItem>
-          //     ))}
-          //   </List>
-          // </ListItem>
         })}
       </List>
     </VStack>

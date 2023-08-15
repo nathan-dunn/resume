@@ -97,7 +97,7 @@ export const Page = () => {
             maxW="31%"
             minW="31%"
             h="full"
-            spacing={5}
+            spacing={8}
             pl={4}
             pr={4}
             pb={2}

@@ -73,7 +73,7 @@ const data = {
       description:
         ' The web version of our Marketplace product where wholesale auto dealers can buy and sell vehicles online',
       employer: 'Integrated Auction Solutions',
-      role: 'Senior Frontend Engineer',
+      title: 'Senior Frontend Engineer',
       dates: 'Nov 2018 - Present',
       tech: `React, Redux, Redux-Persist, React-Router, Elasticsearch, webpack, Bootstrap, Semantic-UI, Node.js, Express, REST, SignalR, Firebase, 
       GA4, Github Actions, Docker, Kubernetes, Google Cloud, AWS S3, AWS Fargate`,
@@ -87,7 +87,7 @@ const data = {
       project: 'MARKETPLACE MOBILE',
       description: 'The mobile version of our Marketplace product',
       employer: 'Integrated Auction Solutions',
-      role: 'Senior Frontend Engineer',
+      title: 'Senior Frontend Engineer',
       dates: 'Nov 2018 - Present',
       tech: 'iOS, Android, React-Native, Redux, React-Router-Native-Flux, Algolia, REST, SignalR, Firebase, GA4, Fastlane, Gradle, Expo',
       highlights: [
@@ -101,7 +101,7 @@ const data = {
       description: `Originally a mobile app used to add inventory, photos, and vehicle condition reports -- 
       later the functionality was embedded into Marketplace Web and Marketplace Mobile`,
       employer: 'Integrated Auction Solutions',
-      role: 'Senior Frontend Engineer',
+      title: 'Senior Frontend Engineer',
       dates: 'Nov 2018 - Present',
       tech: 'iOS, React-Native, Redux, React-Router-Native-Flux, REST, Fastlane',
       highlights: [
@@ -113,7 +113,7 @@ const data = {
       description:
         'Custom authorization and authentication system for use with our Marketplace product',
       employer: 'Integrated Auction Solutions',
-      role: 'Senior Frontend Engineer',
+      title: 'Senior Frontend Engineer',
       dates: 'Nov 2018 - Present',
       tech: `Nextjs, React, Redux, Redux-Persist, Sass, Semantic-UI, Node.js, Express, PostgreSQL, MSSQL, Keycloak, Twilio, REST, 
       JWTs, Github Actions, Docker, Kubernetes, Google Cloud, AWS Fargate`,
@@ -123,11 +123,11 @@ const data = {
     },
 
     {
-      project: 'Tiempo',
+      project: 'TIEMPO',
       tech: 'React, Redux, React-Router, Passport, Jest, Enzyme, Tachyons, Node.js, Express, MongoDB, Mongoose, ',
       description: 'Paid internship at a software development company in Austin, TX',
       employer: 'Moove-It',
-      role: 'Fullstack Developer',
+      title: 'Fullstack Developer',
       dates: 'May 2018 - Aug 2018',
       highlights: [
         'Worked on developing an internal time tracking app used for managing hours spent on different client projects',
