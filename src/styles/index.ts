@@ -1,16 +1,19 @@
 import { extendTheme } from '@chakra-ui/react';
 import { mode } from '@chakra-ui/theme-tools';
 
-const chakraGray = '#718096';
 const chakraBlueGray = '#2B3549';
 const white = '#FFF';
 const almostWhite = '#F0F0F0';
 const black = '#000';
-const dBlue = '#3B4358';
-const dOrange = '#BB7563';
-const dGray = '#D8D8D8';
-const primaryFontColor = '#000';
-const secondaryFontColor = '#404040';
+const almostBlack = '#333';
+
+const backgroundColor1 = '#BB7563';
+const backgroundColor2 = '#3B4358';
+const backgroundColor3 = '#D8D8D8';
+
+const fontColor1 = '#000';
+const fontColor2 = '#404040';
+const fontColor3 = backgroundColor1;
 
 const transparent = 'transparent';
 
@@ -20,21 +23,26 @@ export const theme = extendTheme({
     useSystemColorMode: true,
   },
   colors: {
-    chakraGray,
     chakraBlueGray,
-    white,
+
     black,
+    almostBlack,
+    white,
     almostWhite,
-    dBlue,
-    dOrange,
-    dGray,
+
+    backgroundColor1,
+    backgroundColor2,
+    backgroundColor3,
+
+    fontColor1,
+    fontColor2,
+    fontColor3,
+
     transparent,
-    primaryFontColor,
-    secondaryFontColor,
   },
   fonts: {
-    primaryFontFamily: `'Montserrat', sans-serif`,
-    secondaryFontFamily: `'Nunito', sans-serif`,
+    fontFamily1: `'Montserrat', sans-serif`,
+    fontFamily2: `'Nunito', sans-serif`,
   },
   breakpoints: {
     sm: '320px',

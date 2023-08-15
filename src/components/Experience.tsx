@@ -13,7 +13,7 @@ export const Experience = () => {
       spacing={0}
       // border="1px solid darkblue"
     >
-      <SectionHeader color={theme.colors.dOrange} title="WORK EXPERIENCE" />
+      <SectionHeader color={theme.colors.fontColor3} title="WORK EXPERIENCE" />
 
       <List mt={1}>
         {data.experience.map((job, jobIndex) => (

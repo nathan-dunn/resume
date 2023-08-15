@@ -7,10 +7,7 @@ interface SectionHeaderProps {
   color?: string;
 }
 
-export const SectionHeader = ({
-  title,
-  color = theme.colors.primaryFontColor,
-}: SectionHeaderProps) => {
+export const SectionHeader = ({ title, color = theme.colors.fontColor1 }: SectionHeaderProps) => {
   return (
     <Text
       fontSize={14}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, VStack, HStack } from '@chakra-ui/react';
+import { Text, VStack } from '@chakra-ui/react';
 import data from '../data';
 import { theme } from '../styles';
 
@@ -17,9 +17,9 @@ export const Title = () => {
       // border="1px solid darkblue"
     >
       <Text
-        color={theme.colors.dOrange}
+        color={theme.colors.fontColor3}
         fontSize={32}
-        fontFamily={theme.fonts.primaryFontFamily}
+        fontFamily={theme.fonts.fontFamily1}
         fontWeight={700}
         letterSpacing="2px"
         lineHeight="1.0em"
@@ -27,7 +27,7 @@ export const Title = () => {
         {name}
       </Text>
 
-      <Text color={theme.colors.dOrange} fontSize={16}>
+      <Text color={theme.colors.fontColor3} fontSize={16}>
         {title}
       </Text>
     </VStack>
@@ -46,9 +46,9 @@ export const TitleMobile = () => {
       // border="1px solid darkblue"
     >
       <Text
-        color={theme.colors.dOrange}
+        color={theme.colors.fontColor3}
         fontSize={24}
-        fontFamily={theme.fonts.primaryFontFamily}
+        fontFamily={theme.fonts.fontFamily1}
         fontWeight={700}
         letterSpacing="2px"
         lineHeight="1.0em"
@@ -56,7 +56,7 @@ export const TitleMobile = () => {
         {name}
       </Text>
 
-      <Text color={theme.colors.dOrange} fontSize={14}>
+      <Text color={theme.colors.fontColor3} fontSize={14}>
         {title}
       </Text>
     </VStack>

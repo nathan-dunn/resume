@@ -45,7 +45,7 @@ const PDFButton = ({ pageRef }: PDFButtonProps) => {
       fontSize="12px"
       variant="outline"
       position="absolute"
-      backgroundColor={theme.colors.dGray}
+      backgroundColor={theme.colors.backgroundColor3}
       top={4}
       left={4}
     >
@@ -55,13 +55,11 @@ const PDFButton = ({ pageRef }: PDFButtonProps) => {
 };
 
 export const Page = () => {
-  const isMobile = !!useIsMobile();
   const windowRef = useRef<any>(null);
   const pageRef = useRef<any>(null);
-  const leftRef = useRef<any>(null);
-  const rightRef = useRef<any>(null);
 
-  let width: string = '738px';
+  const isMobile = !!useIsMobile();
+  const width: string = '738px';
 
   return !isMobile ? (
     <Stack
@@ -77,11 +75,8 @@ export const Page = () => {
         ref={pageRef}
         h="100%"
         width={width}
-        // overflow="auto"
-        // spacing={0}
-        fontFamily={theme.fonts.secondaryFontFamily}
-        color={theme.colors.secondaryFontColor}
-        // backgroundColor={theme.colors.dGray}
+        fontFamily={theme.fonts.fontFamily2}
+        color={theme.colors.fontColor2}
         borderWidth="1px"
         borderColor="lightgray"
         p={0}
@@ -90,7 +85,6 @@ export const Page = () => {
       >
         <Header width={width} />
         <HStack
-          ref={leftRef}
           w="100%"
           height="100%"
           minHeight="100%"
@@ -107,7 +101,7 @@ export const Page = () => {
             pl={4}
             pr={4}
             pb={2}
-            backgroundColor={theme.colors.dGray}
+            backgroundColor={theme.colors.backgroundColor3}
             // border="1px solid red"
           >
             <Photo />
@@ -119,11 +113,10 @@ export const Page = () => {
 
           {/* RIGHT SIDE */}
           <VStack
-            ref={rightRef}
             w="100%"
             h="full"
             justify="flex-start"
-            spacing={3}
+            spacing={2}
             pl={4}
             pr={8}
             pb={2}
@@ -131,7 +124,7 @@ export const Page = () => {
             // border="1px solid red"
           >
             <Title />
-            <SectionDivider bg={theme.colors.dGray} my={1.5} />
+            <SectionDivider bg={theme.colors.backgroundColor3} my={1} />
             <Experience />
           </VStack>
         </HStack>
@@ -146,7 +139,7 @@ export const Page = () => {
         // maxWidth={'100vw'}
         // overflow="auto"
         spacing={2}
-        fontFamily={theme.fonts.secondaryFontFamily}
+        fontFamily={theme.fonts.fontFamily2}
         borderWidth="1px"
         borderColor="lightgray"
         // boxShadow={`5px 5px 10px`}
@@ -158,7 +151,7 @@ export const Page = () => {
           <TitleMobile />
         </HStack>
 
-        <Stack px={4} py={2} backgroundColor={theme.colors.dGray} w="100%" spacing={0}>
+        <Stack px={4} py={2} backgroundColor={theme.colors.backgroundColor3} w="100%" spacing={0}>
           <ContactsMobile />
         </Stack>
 
@@ -172,7 +165,7 @@ export const Page = () => {
           pl={4}
           pr={6}
           py={2}
-          backgroundColor={theme.colors.dGray}
+          backgroundColor={theme.colors.backgroundColor3}
           align="flex-start"
         >
           <EducationMobile />
