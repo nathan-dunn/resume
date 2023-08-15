@@ -6,6 +6,20 @@ import { data, theme } from '../config';
 
 const { colors, fonts } = theme;
 
+interface BulletProps {
+  label: string;
+  value: string;
+}
+
+const Bullet = ({ label, value }: BulletProps) => (
+  <Text mb={0} align="justify" fontSize={fonts.fs1}>
+    <Text fontWeight="500" display="inline" mr={1}>
+      {`• ${label}:`}
+    </Text>
+    {value}
+  </Text>
+);
+
 export const Experience = () => {
   return (
     <VStack
@@ -24,17 +38,15 @@ export const Experience = () => {
             employer,
             title,
             dates,
-            description,
+            overview,
             tech,
-            highlights,
           }: {
             project: string;
             employer: string;
             title: string;
             dates: string;
-            description: string;
+            overview: string;
             tech: string;
-            highlights: string[];
           } = experience;
 
           const fontWeight = 600;
@@ -45,11 +57,18 @@ export const Experience = () => {
               key={experienceIndex}
               mb={experienceIndex === data.experience.length - 1 ? 0 : 6}
             >
-              <Flex justify="space-between" fontSize={fonts.fs1} fontWeight={fontWeight}>
+              {/* PROJECT NAME + EMPLOYER */}
+              <Flex
+                justify="space-between"
+                fontSize={fonts.fs1}
+                fontWeight={fontWeight}
+                letterSpacing="1px"
+              >
                 <Text>{project}</Text>
                 <Text>{employer}</Text>
               </Flex>
 
+              {/* JOB TITLE + DATES */}
               <Flex justify="space-between" fontSize={fonts.fs1} fontWeight={fontWeight}>
                 <Text>{title}</Text>
                 <Text>{dates}</Text>
@@ -57,26 +76,8 @@ export const Experience = () => {
 
               <SectionDivider h={0.5} />
 
-              <Text mb={1} align="justify" fontSize={fonts.fs1}>
-                <Text fontWeight={fontWeight2} display="inline" mr={1}>
-                  Project Overview:
-                </Text>
-                {description}
-              </Text>
-
-              <Text mb={1} align="justify" fontSize={fonts.fs1}>
-                <Text fontWeight={fontWeight2} display="inline" mr={1}>
-                  Tech:
-                </Text>
-                {tech}
-              </Text>
-
-              {/* <Text mb={1} align="justify" fontSize={fonts.fs1}>
-                <Text fontWeight={fontWeight2} display="inline" mr={1}>
-                  Highlights:
-                </Text>
-                {highlights.join('; ') + '.'}
-              </Text> */}
+              <Bullet label="Overview" value={overview} />
+              <Bullet label="Tech" value={tech} />
             </ListItem>
           );
         })}
@@ -98,7 +99,57 @@ export const ExperienceMobile = () => {
         <SectionHeader title="WORK EXPERIENCE" />
       </Box>
 
-      <List mt={1}></List>
+      <List mt={1}>
+        {data.experience.map((experience, experienceIndex) => {
+          const {
+            project,
+            employer,
+            title,
+            dates,
+            overview,
+            tech,
+          }: {
+            project: string;
+            employer: string;
+            title: string;
+            dates: string;
+            overview: string;
+            tech: string;
+          } = experience;
+
+          const fontWeight = 600;
+          const fontWeight2 = 500;
+
+          return (
+            <ListItem
+              key={experienceIndex}
+              mb={experienceIndex === data.experience.length - 1 ? 0 : 6}
+            >
+              {/* PROJECT NAME + EMPLOYER */}
+              <Flex
+                justify="space-between"
+                fontSize={fonts.fs1}
+                fontWeight={fontWeight}
+                letterSpacing="1px"
+              >
+                <Text>{project}</Text>
+                <Text>{employer}</Text>
+              </Flex>
+
+              {/* JOB TITLE + DATES */}
+              <Flex justify="space-between" fontSize={fonts.fs1} fontWeight={fontWeight}>
+                <Text>{title}</Text>
+                <Text>{dates}</Text>
+              </Flex>
+
+              <SectionDivider h={0.5} />
+
+              <Bullet label="Overview" value={overview} />
+              <Bullet label="Tech" value={tech} />
+            </ListItem>
+          );
+        })}
+      </List>
     </VStack>
   );
 };

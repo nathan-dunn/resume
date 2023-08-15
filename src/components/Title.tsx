@@ -35,19 +35,20 @@ export const Title = () => {
 };
 
 export const TitleMobile = () => {
-  const height: string = '100px';
+  const height: string = '160px';
   return (
     <VStack
       h={height}
       minH={height}
       w="100%"
-      justify="center"
+      justify="flex-end"
       align="center"
       spacing={1}
+      p={2}
       // border="1px solid darkblue"
     >
       <Text
-        color={colors.fc2}
+        color={colors.fc1}
         fontSize={24}
         fontFamily={fonts.ff1}
         fontWeight={700}
@@ -57,7 +58,7 @@ export const TitleMobile = () => {
         {data.profile.name}
       </Text>
 
-      <Text color={colors.fc2} fontSize={14}>
+      <Text color={colors.fc1} fontSize={14}>
         {data.profile.title}
       </Text>
     </VStack>

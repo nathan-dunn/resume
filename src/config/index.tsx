@@ -111,68 +111,58 @@ export const data = {
   experience: [
     {
       project: 'MARKETPLACE WEB',
-      description:
-        ' The web version of our Marketplace product where wholesale auto dealers can buy and sell vehicles online',
       employer: 'Integrated Auction Solutions',
       title: 'Senior Frontend Engineer',
       dates: 'Nov 2018 - Present',
+      overview: `Our Marketplace product is where wholesale auto dealers can buy and sell vehicles online. 
+      As leader developer since 2022 I created and maintained individual Marketplace web apps for our 12+ customers, was responsible for all bug fixes & features including
+      implementing real-time bidding during live auctions, 
+      significantly improving performance and initial load time by code splitting, reducing bundle size, and bringing codebase from circa 2016 to 2023.`,
       tech: `React, Redux, Redux-Persist, React-Router, Elasticsearch, webpack, Bootstrap, Semantic-UI, Node.js, Express, REST, SignalR, Firebase, 
       GA4, Github Actions, Docker, Kubernetes, Google Cloud, AWS S3, AWS Fargate`,
-      highlights: [
-        `Created and maintained individual Marketplace web apps for our 12+ customers`,
-        `Implemented real-time bidding during live auctions using signalR`,
-        `Significantly improved performance and initial load time by code splitting, reducing bundle size, and bringing codebase from circa 2016 to 2023`,
-      ],
     },
     {
       project: 'MARKETPLACE MOBILE',
-      description: 'The mobile version of our Marketplace product',
       employer: 'Integrated Auction Solutions',
       title: 'Senior Frontend Engineer',
       dates: 'Nov 2018 - Present',
+      overview: `Our Marketplace product is where wholesale auto dealers can buy and sell vehicles online. 
+      As leader developer since 2022 I created and maintained individual iOS and Android apps for our 12+ customers, was responsible for all bug fixes & features including
+      incorporated our CORE product into Marketplace Mobile, and setting up Fastlane for switching customer configurations, creating builds, and pushing betas`,
       tech: 'iOS, Android, React-Native, Redux, React-Router-Native-Flux, Algolia, REST, SignalR, Firebase, GA4, Fastlane, Gradle, Expo',
-      highlights: [
-        `Created and maintained individual iOS and Android apps for our 12+ customers with highly customizable configurations, logos, and colors, but sharing a common codebase`,
-        `Incorporated our CORE product into Marketplace Mobile`,
-        `Set up Fastlane for switching customer configurations, creating builds, and pushing betas`,
-      ],
     },
     {
       project: 'CORE',
-      description: `Originally a mobile app used to add inventory, photos, and vehicle condition reports -- 
-      later the functionality was embedded into Marketplace Web and Marketplace Mobile`,
       employer: 'Integrated Auction Solutions',
       title: 'Senior Frontend Engineer',
       dates: 'Nov 2018 - Present',
+      overview: `CoRe was originally a mobile only app used to add inventory, photos, and vehicle condition reports but  
+      later incorporated into our Marketplace Web and Marketplace Mobile projects. 
+      As lead developer since 2022 I was responsible for for all bug fixes & features including 
+      batch photo uploads, an interactive photo gallery (SpinCar, Black Widow), and incorporating third-party AI condition reports`,
       tech: 'iOS, React-Native, Redux, React-Router-Native-Flux, REST, Fastlane',
-      highlights: [
-        'Batch photo uploads, interactive photo gallery (SpinCar, Black Widow), and AI condition reports (Ravin AI)',
-      ],
     },
     {
       project: 'IAS CONNECT',
-      description:
-        'Custom authorization and authentication system for use with our Marketplace product',
       employer: 'Integrated Auction Solutions',
       title: 'Senior Frontend Engineer',
       dates: 'Nov 2018 - Present',
+      overview: `IAS Connect is our custom authorization and authentication system for our Marketplace product.
+        As lead developer since 2022 I was responsible for for all bug fixes & features including 
+        a joint task with our dev ops engineer to migrate our builds from Kubernetes and Google Cloud to AWS Fargate
+        `,
       tech: `Nextjs, React, Redux, Redux-Persist, Sass, Semantic-UI, Node.js, Express, PostgreSQL, MSSQL, Keycloak, Twilio, REST, 
       JWTs, Github Actions, Docker, Kubernetes, Google Cloud, AWS Fargate`,
-      highlights: [
-        `Worked with our dev ops engineer to switch our builds from Kubernetes and Google Cloud to AWS Fargate`,
-      ],
     },
 
     {
       project: 'TIEMPO',
-      tech: 'React, Redux, React-Router, Passport, Jest, Enzyme, Tachyons, Node.js, Express, MongoDB, Mongoose, ',
-      description: 'Paid internship at a software development company in Austin, TX',
       employer: 'Moove-It',
       title: 'Fullstack Developer',
       dates: 'May 2018 - Aug 2018',
-      highlights: [
-        'Worked on developing an internal time tracking app used for managing hours spent on different client projects',
-      ],
+      tech: 'React, Redux, React-Router, Passport, Jest, Enzyme, Tachyons, Node.js, Express, MongoDB, Mongoose, ',
+      overview: `This was a paid internship at a software development company in Austin, TX. 
+      I worked on an internal time-tracking app used for managing hours spent on client projects `,
     },
   ],
 };

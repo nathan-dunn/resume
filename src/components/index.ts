@@ -1,4 +1,5 @@
-export * from './Contacts';
+export * from './ColorModeSwitcher';
+export * from './Contact';
 export * from './Education';
 export * from './Experience';
 export * from './Header';
@@ -9,4 +10,3 @@ export * from './SectionDivider';
 export * from './SectionHeader';
 export * from './Skills';
 export * from './Title';
-export * from './ColorModeSwitcher';

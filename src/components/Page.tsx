@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
-import { Grid, Button, Stack, HStack, VStack } from '@chakra-ui/react';
+import { Box, Grid, Button, Stack, HStack, VStack } from '@chakra-ui/react';
 import {
-  Contacts,
-  ContactsMobile,
+  Contact,
+  ContactMobile,
   Education,
   EducationMobile,
   Experience,
@@ -48,7 +48,7 @@ const PDFButton = ({ pageRef }: PDFButtonProps) => {
       fontSize="12px"
       variant="outline"
       position="absolute"
-      backgroundColor={colors.backgroundColor3}
+      bg={colors.backgroundColor3}
       top={4}
       left={4}
     >
@@ -104,12 +104,12 @@ export const Page = () => {
             pl={4}
             pr={4}
             pb={4}
-            backgroundColor={colors.bg2}
-            justify="space-between"
+            bg={colors.bg2}
+            spacing={5}
             // border="1px solid red"
           >
             <Photo />
-            <Contacts />
+            <Contact />
             <Education />
             <Skills />
             <Personal />
@@ -124,7 +124,7 @@ export const Page = () => {
             pl={4}
             pr={8}
             pb={4}
-            backgroundColor={colors.bg1}
+            bg={colors.bg1}
             // border="1px solid red"
           >
             <Title />
@@ -145,39 +145,30 @@ export const Page = () => {
         fontSize={fonts.fs1}
         borderWidth="1px"
         borderColor="lightgray"
-        // boxShadow={`5px 5px 10px`}
+        bg={colors.bg1}
         // border="1px dashed green"
       >
         {/* <Header width={width} /> */}
-        <HStack w="100%" align="center" justify="center" spacing={0}>
-          <PhotoMobile />
+
+        <VStack w="100%" align="center" justify="space-evenly" bg={colors.bg1} px={6} py={2}>
           <TitleMobile />
-        </HStack>
+          {/* <PhotoMobile /> */}
 
-        <Stack px={4} py={2} backgroundColor={colors.bg2} w="100%" spacing={0}>
-          <ContactsMobile />
-        </Stack>
+          <ContactMobile />
+        </VStack>
 
-        <Stack px={4} py={2} w="100%" spacing={0}>
+        <Box px={4} py={2} bg={colors.bg2} w="100%">
           <SkillsMobile />
-        </Stack>
+        </Box>
 
-        <HStack
-          w="100%"
-          spacing={0}
-          pl={4}
-          pr={6}
-          py={2}
-          backgroundColor={colors.bg2}
-          align="flex-start"
-        >
+        <HStack w="100%" align="flex-start" justify="space-evenly" bg={colors.bg1} px={6} py={2}>
           <EducationMobile />
           <PersonalMobile />
         </HStack>
 
-        <Stack pl={4} pr={6} py={2} w="100%" spacing={0}>
+        <Box px={4} py={2} bg={colors.bg2} w="100%">
           <ExperienceMobile />
-        </Stack>
+        </Box>
       </VStack>
     </Stack>
   );

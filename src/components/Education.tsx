@@ -12,9 +12,9 @@ export const Education = () => {
       // border="1px solid darkblue"
     >
       <SectionHeader title="EDUCATION" />
-      <UnorderedList>
+      <UnorderedList pl={1}>
         {data.education.map((item, index) => (
-          <ListItem key={index}>
+          <ListItem key={index} mb={1}>
             <Text>{item}</Text>
           </ListItem>
         ))}
@@ -34,7 +34,7 @@ export const EducationMobile = () => {
       <Box alignSelf="center">
         <SectionHeader title="EDUCATION" />
       </Box>
-      <UnorderedList>
+      <UnorderedList pl={1}>
         {data.education.map((item, index) => (
           <ListItem key={index}>
             <Text>{item}</Text>
