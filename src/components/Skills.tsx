@@ -6,10 +6,11 @@ import { data } from '../config';
 
 interface SkillsListProps {
   list: string[];
+  width: string;
 }
 
-const SkillsList = ({ list }: SkillsListProps) => (
-  <UnorderedList pl={1} w="33%">
+const SkillsList = ({ list, width }: SkillsListProps) => (
+  <UnorderedList pl={1} w={width}>
     {list.map((item: string, index: number) => (
       <ListItem key={index} mb={0}>
         {item}
@@ -34,8 +35,8 @@ export const Skills = () => {
       <SectionHeader title="TECH SKILLS + TOOLS" />
 
       <HStack w="100%" spacing={0} justify="space-between">
-        <SkillsList list={list1} />
-        <SkillsList list={list2} />
+        <SkillsList list={list1} width="50%" />
+        <SkillsList list={list2} width="50%" />
       </HStack>
     </VStack>
   );
@@ -58,9 +59,9 @@ export const SkillsMobile = () => {
       <SectionHeaderMobile title="TECH SKILLS + TOOLS" />
 
       <HStack w={width < 412 ? '100%' : '80%'} justify="center" align="flex-start">
-        <SkillsList list={list1} />
-        <SkillsList list={list2} />
-        <SkillsList list={list3} />
+        <SkillsList list={list1} width="33%" />
+        <SkillsList list={list2} width="33%" />
+        <SkillsList list={list3} width="33%" />
       </HStack>
     </VStack>
   );
