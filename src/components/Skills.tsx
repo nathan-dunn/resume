@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Stack, ListItem, UnorderedList, VStack } from '@chakra-ui/react';
 import { SectionHeader } from '.';
-import data from '../data';
+import { data } from '../config';
 
 export const Skills = () => {
   const part = Math.ceil(data.skills.length / 2);

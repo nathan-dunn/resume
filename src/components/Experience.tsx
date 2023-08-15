@@ -1,9 +1,9 @@
 import React from 'react';
-import { Box, Flex, Text, UnorderedList, ListItem, List, VStack } from '@chakra-ui/react';
+import { Box, Flex, Text, ListItem, List, VStack } from '@chakra-ui/react';
 import { SectionHeader } from './SectionHeader';
 import { SectionDivider } from './SectionDivider';
-import { theme } from '../styles';
-import data from '../data';
+import { data, theme } from '../config';
+const { colors } = theme;
 
 export const Experience = () => {
   return (
@@ -14,7 +14,7 @@ export const Experience = () => {
       spacing={0}
       // border="1px solid darkblue"
     >
-      <SectionHeader color={theme.colors.fontColor3} title="WORK EXPERIENCE" />
+      <SectionHeader color={colors.fc2} title="WORK EXPERIENCE" />
 
       <List mt={1}>
         {data.experience.map((experience, experienceIndex) => {
@@ -54,7 +54,7 @@ export const Experience = () => {
                 <Text>{dates}</Text>
               </Flex>
 
-              <SectionDivider bg={theme.colors.backgroundColor3} />
+              <SectionDivider bg={colors.backgroundColor3} />
 
               <Text mb={1} align="justify" fontSize={fontSize2}>
                 <Text fontWeight={fontWeight2} display="inline" mr={1}>

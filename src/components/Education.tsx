@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Text, UnorderedList, ListItem, VStack } from '@chakra-ui/react';
-import data from '../data';
 import { SectionHeader } from './SectionHeader';
+import { data } from '../config';
 
 export const Education = () => {
   return (

@@ -1,9 +1,8 @@
 import React from 'react';
 import { Text, VStack } from '@chakra-ui/react';
-import data from '../data';
-import { theme } from '../styles';
+import { theme, data } from '../config';
 
-const { name, title } = data.profile;
+const { colors, fonts } = theme;
 
 export const Title = () => {
   return (
@@ -17,18 +16,18 @@ export const Title = () => {
       // border="1px solid darkblue"
     >
       <Text
-        color={theme.colors.fontColor3}
+        color={colors.fc2}
         fontSize={32}
-        fontFamily={theme.fonts.fontFamily1}
-        fontWeight={700}
+        fontFamily={fonts.ff1}
+        fontWeight={600}
         letterSpacing="2px"
         lineHeight="1.0em"
       >
-        {name}
+        {data.profile.name}
       </Text>
 
-      <Text color={theme.colors.fontColor3} fontSize={16}>
-        {title}
+      <Text color={colors.fc2} fontSize={16}>
+        {data.profile.title}
       </Text>
     </VStack>
   );
@@ -46,18 +45,18 @@ export const TitleMobile = () => {
       // border="1px solid darkblue"
     >
       <Text
-        color={theme.colors.fontColor3}
+        color={colors.fc2}
         fontSize={24}
-        fontFamily={theme.fonts.fontFamily1}
+        fontFamily={fonts.ff1}
         fontWeight={700}
         letterSpacing="2px"
         lineHeight="1.0em"
       >
-        {name}
+        {data.profile.name}
       </Text>
 
-      <Text color={theme.colors.fontColor3} fontSize={14}>
-        {title}
+      <Text color={colors.fc2} fontSize={14}>
+        {data.profile.title}
       </Text>
     </VStack>
   );

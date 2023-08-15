@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, VStack, Text } from '@chakra-ui/react';
 import { SectionHeader } from './SectionHeader';
-import data from '../data';
+import { data } from '../config';
 
 export const Personal = () => {
   return (

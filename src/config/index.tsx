@@ -1,11 +1,54 @@
 import { MdOutlinePhoneIphone, MdEmail, MdLocationOn } from 'react-icons/md';
 import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
+import { extendTheme } from '@chakra-ui/react';
+import { mode } from '@chakra-ui/theme-tools';
 
-const data = {
+// measurements
+const mobile = 768;
+const pageWidth = 738;
+const pageSplit = '31%';
+
+// colors
+const chakraBlueGray = '#2B3549';
+const dark = '#333';
+const light = '#F0F0F0';
+
+const tc1 = '#D0826F';
+const tc2 = '#3B4358';
+const bg1 = '#F0F0F0';
+const bg2 = '#DfE0E0';
+const bg3 = '#FFF';
+const fc1 = '#333';
+const fc2 = '#D0826F';
+
+// fonts
+const ff1 = `'Montserrat', sans-serif`;
+const ff2 = `'Nunito', sans-serif`;
+const fs1 = 24;
+const fs2 = 13;
+const fs3 = 11;
+
+export const theme = extendTheme({
+  config: { initialColorMode: 'dark', useSystemColorMode: true },
+  settings: { pageWidth, pageSplit, mobile },
+  colors: { chakraBlueGray, light, dark, tc1, tc2, bg1, bg2, bg3, fc1, fc2 },
+  fonts: { ff1, ff2, fs1, fs2, fs3 },
+  breakpoints: { sm: '320px', md: '768px', lg: '960px', xl: '1200px', '2xl': '1536px' },
+  styles: {
+    global: (props: any) => ({
+      body: {
+        bg: mode(light, dark)(props), // light mode, dark mode
+        color: mode(dark, light)(props), // light mode, dark mode
+      },
+    }),
+  },
+});
+
+export const data = {
   profile: {
     title: 'SENIOR SOFTWARE ENGINEER',
     name: 'NATHAN DUNN',
-    photos: '',
+    photoFile: 'profile.png',
   },
   contacts: [
     {
@@ -135,5 +178,3 @@ const data = {
     },
   ],
 };
-
-export default data;

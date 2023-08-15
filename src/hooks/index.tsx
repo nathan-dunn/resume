@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { theme } from '../config';
+const { settings } = theme;
 
-const getIsMobile = () => window.innerWidth <= 768;
+const getIsMobile = () => window.innerWidth <= settings.mobile;
 
 export const useIsMobile = () => {
   const [isMobile, setIsMobile] = useState(getIsMobile());
