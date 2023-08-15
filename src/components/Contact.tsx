@@ -1,5 +1,6 @@
 import React from 'react';
 import { Flex, Box, Text, Link, VStack, HStack } from '@chakra-ui/react';
+import { useWindowSize } from 'usehooks-ts';
 import { SectionHeader } from './SectionHeader';
 import { data } from '../config';
 
@@ -35,7 +36,9 @@ export const Contact = () => {
 };
 
 export const ContactMobile = () => {
-  const part = Math.ceil(data.contacts.length / 2);
+  const { width } = useWindowSize();
+  const columns = width < 412 ? 1 : 2;
+  const part = Math.ceil(data.contacts.length / columns);
   const list1 = data.contacts.slice(0, part);
   const list2 = data.contacts.slice(part);
 
@@ -43,13 +46,13 @@ export const ContactMobile = () => {
     <HStack
       w="100%"
       align="flex-start"
-      justify="space-between"
+      justify="space-evenly"
       spacing={0}
       p={1}
       // border="1px solid darkblue"
     >
       <VStack align="flex-start" spacing={0}>
-        {list1.map((contact: any, index: number) => (
+        {[...list1].map((contact: any, index: number) => (
           <Link
             key={index}
             href={contact.link}
@@ -67,24 +70,26 @@ export const ContactMobile = () => {
         ))}
       </VStack>
 
-      <VStack align="flex-start" spacing={0}>
-        {list2.map((contact: any, index: number) => (
-          <Link
-            key={index}
-            href={contact.link}
-            cursor={contact.link ? 'pointer' : 'text'}
-            _hover={{ textDecoration: contact.link ? 'underline' : 'none' }}
-            isExternal
-          >
-            <Flex flex="1" align="center">
-              <Box mr={2} fontSize={22}>
-                {contact.icon}
-              </Box>
-              <Text wordBreak={'break-word'}>{contact.text}</Text>
-            </Flex>
-          </Link>
-        ))}
-      </VStack>
+      {columns > 1 && (
+        <VStack align="flex-start" spacing={0}>
+          {list2.map((contact: any, index: number) => (
+            <Link
+              key={index}
+              href={contact.link}
+              cursor={contact.link ? 'pointer' : 'text'}
+              _hover={{ textDecoration: contact.link ? 'underline' : 'none' }}
+              isExternal
+            >
+              <Flex flex="1" align="center">
+                <Box mr={2} fontSize={22}>
+                  {contact.icon}
+                </Box>
+                <Text wordBreak={'break-word'}>{contact.text}</Text>
+              </Flex>
+            </Link>
+          ))}
+        </VStack>
+      )}
     </HStack>
   );
 };

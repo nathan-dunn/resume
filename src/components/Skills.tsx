@@ -1,6 +1,7 @@
 import React from 'react';
-import { Box, ListItem, Stack, UnorderedList, VStack, HStack } from '@chakra-ui/react';
-import { SectionHeader } from '.';
+import { ListItem, UnorderedList, VStack, HStack } from '@chakra-ui/react';
+import { useWindowSize } from 'usehooks-ts';
+import { SectionHeader, SectionHeaderMobile } from '.';
 import { data } from '../config';
 
 interface SkillsListProps {
@@ -8,7 +9,7 @@ interface SkillsListProps {
 }
 
 const SkillsList = ({ list }: SkillsListProps) => (
-  <UnorderedList pl={1}>
+  <UnorderedList pl={1} w="33%">
     {list.map((item: string, index: number) => (
       <ListItem key={index} mb={0}>
         {item}
@@ -41,6 +42,8 @@ export const Skills = () => {
 };
 
 export const SkillsMobile = () => {
+  const { width } = useWindowSize();
+
   const part = Math.ceil(data.skills.length / 4);
   const list1 = data.skills.slice(0, part);
   const list2 = data.skills.slice(part, part * 2);
@@ -53,11 +56,9 @@ export const SkillsMobile = () => {
       spacing={0}
       //  border="1px solid darkblue"
     >
-      <Box alignSelf="center">
-        <SectionHeader title="TECH SKILLS + TOOLS" />
-      </Box>
+      <SectionHeaderMobile title="TECH SKILLS + TOOLS" />
 
-      <HStack w="100%" spacing={4} justify="space-evenly">
+      <HStack w={width < 412 ? '100%' : '80%'} justify="center" align="flex-start">
         <SkillsList list={list1} />
         <SkillsList list={list2} />
         <SkillsList list={list3} />

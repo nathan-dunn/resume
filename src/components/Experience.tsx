@@ -1,6 +1,6 @@
 import React from 'react';
-import { Box, Flex, Text, ListItem, List, VStack } from '@chakra-ui/react';
-import { SectionHeader } from './SectionHeader';
+import { Flex, Text, ListItem, List, VStack } from '@chakra-ui/react';
+import { SectionHeader, SectionHeaderMobile } from './SectionHeader';
 import { SectionDivider } from './SectionDivider';
 import { data, theme } from '../config';
 
@@ -95,9 +95,7 @@ export const ExperienceMobile = () => {
       spacing={0}
       // border="1px solid darkblue"
     >
-      <Box alignSelf="center">
-        <SectionHeader title="WORK EXPERIENCE" />
-      </Box>
+      <SectionHeaderMobile title="WORK EXPERIENCE" />
 
       <List mt={1}>
         {data.experience.map((experience, experienceIndex) => {
@@ -118,7 +116,6 @@ export const ExperienceMobile = () => {
           } = experience;
 
           const fontWeight = 600;
-          const fontWeight2 = 500;
 
           return (
             <ListItem
@@ -145,6 +142,7 @@ export const ExperienceMobile = () => {
               <SectionDivider h={0.5} />
 
               <Bullet label="Overview" value={overview} />
+              <SectionDivider h={0.5} bg="transparent" />
               <Bullet label="Tech" value={tech} />
             </ListItem>
           );

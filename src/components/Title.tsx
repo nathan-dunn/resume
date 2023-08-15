@@ -1,8 +1,9 @@
 import React from 'react';
 import { Text, VStack } from '@chakra-ui/react';
+import { useWindowSize } from 'usehooks-ts';
 import { theme, data } from '../config';
 
-const { colors, fonts } = theme;
+const { colors, fonts, settings } = theme;
 
 export const Title = () => {
   const height: string = '170px';
@@ -35,11 +36,15 @@ export const Title = () => {
 };
 
 export const TitleMobile = () => {
-  const height: string = '160px';
+  const { width } = useWindowSize();
+  const _width = Math.max(width, settings.minPageWidth);
+  const height: number = _width * 0.33;
+
   return (
     <VStack
+      minH="125px"
+      maxH="130px"
       h={height}
-      minH={height}
       w="100%"
       justify="flex-end"
       align="center"
@@ -49,7 +54,7 @@ export const TitleMobile = () => {
     >
       <Text
         color={colors.fc1}
-        fontSize={24}
+        fontSize={28}
         fontFamily={fonts.ff1}
         fontWeight={700}
         letterSpacing="2px"
@@ -58,7 +63,7 @@ export const TitleMobile = () => {
         {data.profile.name}
       </Text>
 
-      <Text color={colors.fc1} fontSize={14}>
+      <Text color={colors.fc1} fontSize={18}>
         {data.profile.title}
       </Text>
     </VStack>

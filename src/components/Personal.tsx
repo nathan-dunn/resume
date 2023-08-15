@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, VStack, Text } from '@chakra-ui/react';
-import { SectionHeader } from './SectionHeader';
+import { SectionHeader, SectionHeaderMobile } from './SectionHeader';
 import { data } from '../config';
 
 export const Personal = () => {
@@ -12,7 +12,9 @@ export const Personal = () => {
       // border="1px solid darkblue"
     >
       <SectionHeader title="PERSONAL" />
-      <Text textAlign="justify">{data.personal.join(' ')}</Text>
+      <Box>
+        <Text textAlign="justify">{data.personal.join(' ')}</Text>
+      </Box>
     </VStack>
   );
 };
@@ -25,9 +27,7 @@ export const PersonalMobile = () => {
       spacing={0}
       // border="1px solid darkblue"
     >
-      <Box alignSelf="center">
-        <SectionHeader title="PERSONAL" />
-      </Box>
+      <SectionHeaderMobile title="PERSONAL" />
       <Text textAlign="justify">{data.personal.join(' ')}</Text>
     </VStack>
   );

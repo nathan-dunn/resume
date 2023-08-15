@@ -1,6 +1,7 @@
 import React from 'react';
-import { Box, Text, UnorderedList, ListItem, VStack } from '@chakra-ui/react';
-import { SectionHeader } from './SectionHeader';
+import { Text, UnorderedList, ListItem, VStack } from '@chakra-ui/react';
+import { useWindowSize } from 'usehooks-ts';
+import { SectionHeader, SectionHeaderMobile } from './SectionHeader';
 import { data } from '../config';
 
 export const Education = () => {
@@ -24,16 +25,16 @@ export const Education = () => {
 };
 
 export const EducationMobile = () => {
+  const { width } = useWindowSize();
+
   return (
     <VStack
-      w="100%"
       align="flex-start"
       spacing={0}
-      // border="1px solid darkblue"
+      minW="50%"
+      //  border="1px solid darkblue"
     >
-      <Box alignSelf="center">
-        <SectionHeader title="EDUCATION" />
-      </Box>
+      <SectionHeaderMobile title="EDUCATION" />
       <UnorderedList pl={1}>
         {data.education.map((item, index) => (
           <ListItem key={index}>

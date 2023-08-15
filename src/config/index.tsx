@@ -6,6 +6,7 @@ import { mode } from '@chakra-ui/theme-tools';
 // measurements
 const mobile = 768;
 const pageWidth = 738;
+const minPageWidth = 390;
 const pageSplit = '31%';
 
 // colors
@@ -28,7 +29,7 @@ const fs2 = 14;
 
 export const theme = extendTheme({
   config: { initialColorMode: 'dark', useSystemColorMode: true },
-  settings: { pageWidth, pageSplit, mobile },
+  settings: { pageWidth, minPageWidth, pageSplit, mobile },
   colors: { chakraBlueGray, light, dark, tc1, tc2, bg1, bg2, fc1, fc2 },
   fonts: { ff1, ff2, fs1, fs2 },
   breakpoints: { sm: '320px', md: '768px', lg: '960px', xl: '1200px', '2xl': '1536px' },

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text } from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
 import { theme } from '../config';
 
 const { colors, fonts } = theme;
@@ -21,5 +21,22 @@ export const SectionHeader = ({ title, color = colors.fc1 }: SectionHeaderProps)
     >
       {title}
     </Text>
+  );
+};
+
+export const SectionHeaderMobile = ({ title, color = colors.fc1 }: SectionHeaderProps) => {
+  return (
+    <Box alignSelf="center">
+      <Text
+        mb={3}
+        color={color}
+        fontFamily={fonts.ff1}
+        fontSize={fonts.fs2}
+        fontWeight={700}
+        letterSpacing={1}
+      >
+        {title}
+      </Text>
+    </Box>
   );
 };

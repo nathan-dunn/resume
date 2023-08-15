@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { Box, Grid, Button, Stack, HStack, VStack } from '@chakra-ui/react';
 import {
+  ColorModeSwitcher,
   Contact,
   ContactMobile,
   Education,
@@ -8,18 +9,18 @@ import {
   Experience,
   ExperienceMobile,
   Header,
+  HeaderMobile,
   Personal,
   PersonalMobile,
   Photo,
-  PhotoMobile,
   SectionDivider,
   Skills,
   SkillsMobile,
   Title,
   TitleMobile,
-  ColorModeSwitcher,
 } from '.';
-import { useIsMobile } from '../hooks';
+// import { useIsMobile } from '../hooks';
+import { useWindowSize } from 'usehooks-ts';
 import { theme } from '../config';
 import { jsPDF } from 'jspdf';
 
@@ -60,14 +61,15 @@ const PDFButton = ({ pageRef }: PDFButtonProps) => {
 export const Page = () => {
   const windowRef = useRef<any>(null);
   const pageRef = useRef<any>(null);
-  const isMobile = !!useIsMobile();
+  const { width } = useWindowSize();
+  const isMobile = width <= settings.mobile;
 
   return !isMobile ? (
     <Stack
       ref={windowRef}
       h="100%"
       minH="100vh"
-      width="100%"
+      w="100%"
       align="center"
       backgroundColor="#F0F0F0"
       p={3}
@@ -77,7 +79,7 @@ export const Page = () => {
       <Grid
         ref={pageRef}
         h="100%"
-        width={settings.pageWidth}
+        w={settings.pageWidth}
         fontFamily={fonts.ff2}
         fontSize={fonts.fs1}
         color={colors.fc1}
@@ -87,11 +89,11 @@ export const Page = () => {
         // boxShadow={`3px 3px 10px`}
         // border="1px dashed green"
       >
-        <Header width={settings.pageWidth} />
+        <Header />
         <HStack
           w="100%"
-          height="100%"
-          minHeight="100%"
+          h="100%"
+          minH="100%"
           spacing={0}
           align="flex-start"
           // border="1px dashed gold"
@@ -135,29 +137,36 @@ export const Page = () => {
       </Grid>
     </Stack>
   ) : (
-    <Stack ref={windowRef} h="100%" width="100%" align="center" backgroundColor="#F0F0F0">
+    <Stack
+      ref={windowRef}
+      h="100%"
+      w="100vw"
+      minW={settings.minPageWidth}
+      align="center"
+      backgroundColor="#F0F0F0"
+    >
       <VStack
         ref={pageRef}
         h="100%"
-        width="100%"
+        w="100vw"
+        minW={settings.minPageWidth}
         spacing={2}
         fontFamily={fonts.ff2}
         fontSize={fonts.fs1}
         borderWidth="1px"
         borderColor="lightgray"
         bg={colors.bg1}
+        color={colors.fc1}
         // border="1px dashed green"
       >
-        {/* <Header width={width} /> */}
+        <HeaderMobile />
 
-        <VStack w="100%" align="center" justify="space-evenly" bg={colors.bg1} px={6} py={2}>
+        <VStack w="100%" align="center" justify="space-evenly" bg={colors.bg1} p={2}>
           <TitleMobile />
-          {/* <PhotoMobile /> */}
-
           <ContactMobile />
         </VStack>
 
-        <Box px={4} py={2} bg={colors.bg2} w="100%">
+        <Box p={4} bg={colors.bg2} w="100%">
           <SkillsMobile />
         </Box>
 
@@ -166,7 +175,7 @@ export const Page = () => {
           <PersonalMobile />
         </HStack>
 
-        <Box px={4} py={2} bg={colors.bg2} w="100%">
+        <Box p={4} bg={colors.bg2} w="100%">
           <ExperienceMobile />
         </Box>
       </VStack>
