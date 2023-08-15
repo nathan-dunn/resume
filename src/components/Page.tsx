@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Box, Button, Stack, HStack, VStack } from '@chakra-ui/react';
+import { Grid, Button, Stack, HStack, VStack } from '@chakra-ui/react';
 import {
   Contacts,
   ContactsMobile,
@@ -58,8 +58,10 @@ export const Page = () => {
   const isMobile = !!useIsMobile();
   const windowRef = useRef<any>(null);
   const pageRef = useRef<any>(null);
-  let width: string = '768px';
-  width = '738px';
+  const leftRef = useRef<any>(null);
+  const rightRef = useRef<any>(null);
+
+  let width: string = '738px';
 
   return !isMobile ? (
     <Stack
@@ -71,32 +73,41 @@ export const Page = () => {
       p={3}
       // border="1px dashed orange"
     >
-      <VStack
+      <Grid
         ref={pageRef}
         h="100%"
         width={width}
-        overflow="auto"
-        spacing={0}
+        // overflow="auto"
+        // spacing={0}
         fontFamily={theme.fonts.secondaryFontFamily}
         color={theme.colors.secondaryFontColor}
-        backgroundColor={theme.colors.dGray}
+        // backgroundColor={theme.colors.dGray}
         borderWidth="1px"
         borderColor="lightgray"
         p={0}
-        boxShadow={`3px 3px 10px`}
+        // boxShadow={`3px 3px 10px`}
         // border="1px dashed green"
       >
         <Header width={width} />
-
-        {/* LEFT SIDE */}
-        <HStack w="100%" h="100%" spacing={0} minHeight="100%">
+        <HStack
+          ref={leftRef}
+          w="100%"
+          height="100%"
+          minHeight="100%"
+          spacing={0}
+          align="flex-start"
+          // border="1px dashed gold"
+        >
+          {/* LEFT SIDE */}
           <VStack
-            w="31%"
+            maxW="31%"
             minW="31%"
-            h="100%"
+            h="full"
             spacing={5}
             pl={4}
             pr={4}
+            pb={2}
+            backgroundColor={theme.colors.dGray}
             // border="1px solid red"
           >
             <Photo />
@@ -108,12 +119,14 @@ export const Page = () => {
 
           {/* RIGHT SIDE */}
           <VStack
+            ref={rightRef}
             w="100%"
-            h="100%"
-            justify="flext-start"
+            h="full"
+            justify="flex-start"
             spacing={3}
             pl={4}
             pr={8}
+            pb={2}
             backgroundColor={theme.colors.white}
             // border="1px solid red"
           >
@@ -122,7 +135,7 @@ export const Page = () => {
             <Experience />
           </VStack>
         </HStack>
-      </VStack>
+      </Grid>
     </Stack>
   ) : (
     <Stack ref={windowRef} h="100%" width="100%" align="center" backgroundColor="#f5f5f5">

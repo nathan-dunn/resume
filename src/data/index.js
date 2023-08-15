@@ -70,13 +70,13 @@ const data = {
   experience: [
     {
       employer: 'Integrated Auction Solutions',
-      jobTitle: '',
+      jobTitle: 'Senior Frontend Engineer',
       dates: 'Nov 2018 - Present',
       projects: [
         {
           projectName: 'MARKETPLACE WEB',
           details: [
-            'Project: The web version of our Marketplace product where wholesale auto dealers can buy and sell vehicles online',
+            'Project Description: The web version of our Marketplace product where wholesale auto dealers can buy and sell vehicles online',
             `Tech: React, Redux, Redux-Persist, React-Router, Elasticsearch, webpack, Bootstrap, Semantic-UI, Node.js, Express, REST, SignalR, Firebase, 
              GA4, Github Actions, Docker, Kubernetes, Google Cloud, AWS S3, AWS Fargate`,
             `Created and maintained individual Marketplace web apps for our 12+ customers`,
@@ -87,7 +87,7 @@ const data = {
         {
           projectName: 'MARKETPLACE MOBILE',
           details: [
-            'Project: The mobile version of our Marketplace product',
+            'Project Description: The mobile version of our Marketplace product',
             'Tech: iOS, Android, React-Native, Redux, React-Router-Native-Flux, Algolia, REST, SignalR, Firebase, GA4, Fastlane, Gradle, Expo',
             `Created and maintained individual iOS and Android apps for our 12+ customers with highly customizable configurations, logos, and colors, but sharing a common codebase`,
             `Incorporated our CORE product into Marketplace Mobile`,
@@ -97,7 +97,7 @@ const data = {
         {
           projectName: 'CORE',
           details: [
-            `Project: Originally a mobile app used to add inventory, photos, and vehicle condition reports -- 
+            `Project Description: Originally a mobile app used to add inventory, photos, and vehicle condition reports -- 
             later the functionality was embedded into Marketplace Web and Marketplace Mobile`,
             `Tech: iOS, React-Native, Redux, React-Router-Native-Flux, REST, Fastlane`,
             'Batch photo uploads, interactive photo gallery (SpinCar, Black Widow), and AI condition reports (Ravin AI)',
@@ -106,7 +106,7 @@ const data = {
         {
           projectName: 'IAS CONNECT',
           details: [
-            `Project: Custom authorization and authentication system for use with our Marketplace product`,
+            `Project Description: Custom authorization and authentication system for use with our Marketplace product`,
             `Tech: Nextjs, React, Redux, Redux-Persist, sass, styled-components, Semantic-UI, Node.js, Express, PostgreSQL, MSSQL, Keycloak, Twilio, REST, 
             JWTs, Github Actions, Docker, Kubernetes, Google Cloud, AWS Fargate`,
             `Worked with our dev ops engineer to switch our builds from Kubernetes and Google Cloud to AWS Fargate`,
@@ -117,7 +117,7 @@ const data = {
 
     {
       employer: 'Moove-It',
-      jobTitle: '',
+      jobTitle: 'Fullstack Developer',
       dates: 'May 2018 - Aug 2018',
       projects: [
         {
@@ -125,6 +125,7 @@ const data = {
           details: [
             'Paid internship at a software development company in Austin, TX',
             'Worked on developing an internal time tracking app used for managing hours spent on different client projects',
+            // 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
           ],
         },
       ],

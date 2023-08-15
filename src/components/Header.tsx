@@ -27,7 +27,7 @@ export const Header = ({ width }: HeaderProps) => {
         position="absolute"
         zIndex={4}
         borderTop={`135px solid ${theme.colors.dOrange}`} // bottom-right corner
-        borderLeft={`630px solid transparent`}
+        borderLeft={`680px solid transparent`}
         right={0}
       />
     </Box>
