@@ -13,26 +13,24 @@ const chakraBlueGray = '#2B3549';
 const dark = '#333';
 const light = '#F0F0F0';
 
-const tc1 = '#D0826F';
+const tc1 = '#cc917c';
 const tc2 = '#3B4358';
-const bg1 = '#F0F0F0';
-const bg2 = '#DfE0E0';
-const bg3 = '#FFF';
+const bg1 = '#FFF';
+const bg2 = '#DFE0E0';
 const fc1 = '#333';
-const fc2 = '#D0826F';
+const fc2 = tc1;
 
 // fonts
 const ff1 = `'Montserrat', sans-serif`;
 const ff2 = `'Nunito', sans-serif`;
-const fs1 = 24;
-const fs2 = 13;
-const fs3 = 11;
+const fs1 = 11;
+const fs2 = 14;
 
 export const theme = extendTheme({
   config: { initialColorMode: 'dark', useSystemColorMode: true },
   settings: { pageWidth, pageSplit, mobile },
-  colors: { chakraBlueGray, light, dark, tc1, tc2, bg1, bg2, bg3, fc1, fc2 },
-  fonts: { ff1, ff2, fs1, fs2, fs3 },
+  colors: { chakraBlueGray, light, dark, tc1, tc2, bg1, bg2, fc1, fc2 },
+  fonts: { ff1, ff2, fs1, fs2 },
   breakpoints: { sm: '320px', md: '768px', lg: '960px', xl: '1200px', '2xl': '1536px' },
   styles: {
     global: (props: any) => ({

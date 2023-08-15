@@ -12,11 +12,11 @@ interface SectionHeaderProps {
 export const SectionHeader = ({ title, color = colors.fc1 }: SectionHeaderProps) => {
   return (
     <Text
-      fontSize={14}
-      fontWeight={700}
       mb={2}
       color={color}
       fontFamily={fonts.ff1}
+      fontSize={fonts.fs2}
+      fontWeight={700}
       letterSpacing={1}
     >
       {title}

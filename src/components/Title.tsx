@@ -5,14 +5,16 @@ import { theme, data } from '../config';
 const { colors, fonts } = theme;
 
 export const Title = () => {
+  const height: string = '170px';
+
   return (
     <VStack
-      h="160px"
-      minH="160px"
+      h={height}
+      minH={height}
       w="100%"
       justify="flex-end"
       align="flex-start"
-      spacing={1}
+      spacing={0}
       // border="1px solid darkblue"
     >
       <Text
@@ -21,12 +23,11 @@ export const Title = () => {
         fontFamily={fonts.ff1}
         fontWeight={600}
         letterSpacing="2px"
-        lineHeight="1.0em"
       >
         {data.profile.name}
       </Text>
 
-      <Text color={colors.fc2} fontSize={16}>
+      <Text color={colors.fc2} fontSize={16} letterSpacing="3px">
         {data.profile.title}
       </Text>
     </VStack>
@@ -34,10 +35,11 @@ export const Title = () => {
 };
 
 export const TitleMobile = () => {
+  const height: string = '100px';
   return (
     <VStack
-      h="100px"
-      minH="100px"
+      h={height}
+      minH={height}
       w="100%"
       justify="center"
       align="center"

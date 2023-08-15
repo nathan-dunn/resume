@@ -26,9 +26,7 @@ export const Contacts = () => {
             <Box mr={2} fontSize={22}>
               {contact.icon}
             </Box>
-            <Text fontSize={11} wordBreak={'break-word'}>
-              {contact.text}
-            </Text>
+            <Text wordBreak={'break-word'}>{contact.text}</Text>
           </Flex>
         </Link>
       ))}
@@ -61,9 +59,7 @@ export const ContactsMobile = () => {
             <Box mr={2} fontSize={22}>
               {contact.icon}
             </Box>
-            <Text fontSize={11} wordBreak={'break-word'}>
-              {contact.text}
-            </Text>
+            <Text wordBreak={'break-word'}>{contact.text}</Text>
           </Flex>
         </Link>
       ))}

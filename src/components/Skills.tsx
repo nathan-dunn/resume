@@ -20,16 +20,12 @@ export const Skills = () => {
       <Stack direction="row">
         <UnorderedList>
           {list1.map((skill, index) => (
-            <ListItem key={index} fontSize={11}>
-              {skill}
-            </ListItem>
+            <ListItem key={index}>{skill}</ListItem>
           ))}
         </UnorderedList>
         <UnorderedList>
           {list2.map((skill, index) => (
-            <ListItem key={index} fontSize={11}>
-              {skill}
-            </ListItem>
+            <ListItem key={index}>{skill}</ListItem>
           ))}
         </UnorderedList>
       </Stack>
@@ -56,16 +52,12 @@ export const SkillsMobile = () => {
       <Stack direction="row">
         <UnorderedList>
           {list1.map((skill, index) => (
-            <ListItem key={index} fontSize={11}>
-              {skill}
-            </ListItem>
+            <ListItem key={index}>{skill}</ListItem>
           ))}
         </UnorderedList>
         <UnorderedList>
           {list2.map((skill, index) => (
-            <ListItem key={index} fontSize={11}>
-              {skill}
-            </ListItem>
+            <ListItem key={index}>{skill}</ListItem>
           ))}
         </UnorderedList>
       </Stack>

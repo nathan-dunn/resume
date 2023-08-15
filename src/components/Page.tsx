@@ -17,6 +17,7 @@ import {
   SkillsMobile,
   Title,
   TitleMobile,
+  ColorModeSwitcher,
 } from '.';
 import { useIsMobile } from '../hooks';
 import { theme } from '../config';
@@ -65,10 +66,12 @@ export const Page = () => {
     <Stack
       ref={windowRef}
       h="100%"
+      minH="100vh"
       width="100%"
       align="center"
-      backgroundColor={colors.bg1}
+      backgroundColor="#F0F0F0"
       p={3}
+      overflow="auto"
       // border="1px dashed orange"
     >
       <Grid
@@ -76,10 +79,11 @@ export const Page = () => {
         h="100%"
         width={settings.pageWidth}
         fontFamily={fonts.ff2}
+        fontSize={fonts.fs1}
         color={colors.fc1}
         borderWidth="1px"
-        borderColor="lightgray"
         p={0}
+        borderColor="lightgray"
         // boxShadow={`3px 3px 10px`}
         // border="1px dashed green"
       >
@@ -99,7 +103,7 @@ export const Page = () => {
             h="full"
             pl={4}
             pr={4}
-            pb={2}
+            pb={4}
             backgroundColor={colors.bg2}
             justify="space-between"
             // border="1px solid red"
@@ -119,25 +123,26 @@ export const Page = () => {
             spacing={2}
             pl={4}
             pr={8}
-            pb={2}
-            backgroundColor={colors.bg3}
+            pb={4}
+            backgroundColor={colors.bg1}
             // border="1px solid red"
           >
             <Title />
-            <SectionDivider bg={colors.bg2} h={1.5} my={1} />
+            <SectionDivider h={1.5} my={2} />
             <Experience />
           </VStack>
         </HStack>
       </Grid>
     </Stack>
   ) : (
-    <Stack ref={windowRef} h="100%" width="100%" align="center" backgroundColor={colors.bg1}>
+    <Stack ref={windowRef} h="100%" width="100%" align="center" backgroundColor="#F0F0F0">
       <VStack
         ref={pageRef}
         h="100%"
         width="100%"
         spacing={2}
         fontFamily={fonts.ff2}
+        fontSize={fonts.fs1}
         borderWidth="1px"
         borderColor="lightgray"
         // boxShadow={`5px 5px 10px`}

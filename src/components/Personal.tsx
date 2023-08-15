@@ -12,9 +12,7 @@ export const Personal = () => {
       // border="1px solid darkblue"
     >
       <SectionHeader title="PERSONAL" />
-      <Text fontSize={11} textAlign="justify">
-        {data.personal.join(' ')}
-      </Text>
+      <Text textAlign="justify">{data.personal.join(' ')}</Text>
     </VStack>
   );
 };
@@ -30,9 +28,7 @@ export const PersonalMobile = () => {
       <Box alignSelf="center">
         <SectionHeader title="PERSONAL" />
       </Box>
-      <Text fontSize={11} textAlign="justify">
-        {data.personal.join(' ')}
-      </Text>
+      <Text textAlign="justify">{data.personal.join(' ')}</Text>
     </VStack>
   );
 };

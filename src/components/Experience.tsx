@@ -3,7 +3,8 @@ import { Box, Flex, Text, ListItem, List, VStack } from '@chakra-ui/react';
 import { SectionHeader } from './SectionHeader';
 import { SectionDivider } from './SectionDivider';
 import { data, theme } from '../config';
-const { colors } = theme;
+
+const { colors, fonts } = theme;
 
 export const Experience = () => {
   return (
@@ -36,41 +37,41 @@ export const Experience = () => {
             highlights: string[];
           } = experience;
 
-          const fontWeight = 700;
+          const fontWeight = 600;
           const fontWeight2 = 500;
 
-          const fontSize1: number = 13;
-          const fontSize2: number = 11;
-
           return (
-            <ListItem key={experienceIndex} mb={7}>
-              <Flex justify="space-between" fontSize={fontSize1} fontWeight={fontWeight}>
+            <ListItem
+              key={experienceIndex}
+              mb={experienceIndex === data.experience.length - 1 ? 0 : 6}
+            >
+              <Flex justify="space-between" fontSize={fonts.fs1} fontWeight={fontWeight}>
                 <Text>{project}</Text>
                 <Text>{employer}</Text>
               </Flex>
 
-              <Flex justify="space-between" fontSize={fontSize1} fontWeight={fontWeight}>
+              <Flex justify="space-between" fontSize={fonts.fs1} fontWeight={fontWeight}>
                 <Text>{title}</Text>
                 <Text>{dates}</Text>
               </Flex>
 
-              <SectionDivider bg={colors.backgroundColor3} />
+              <SectionDivider h={0.5} />
 
-              <Text mb={1} align="justify" fontSize={fontSize2}>
+              <Text mb={1} align="justify" fontSize={fonts.fs1}>
                 <Text fontWeight={fontWeight2} display="inline" mr={1}>
-                  Project Description:
+                  Project Overview:
                 </Text>
                 {description}
               </Text>
 
-              <Text mb={1} align="justify" fontSize={fontSize2}>
+              <Text mb={1} align="justify" fontSize={fonts.fs1}>
                 <Text fontWeight={fontWeight2} display="inline" mr={1}>
                   Tech:
                 </Text>
                 {tech}
               </Text>
 
-              {/* <Text mb={1} align="justify" fontSize={fontSize2}>
+              {/* <Text mb={1} align="justify" fontSize={fonts.fs1}>
                 <Text fontWeight={fontWeight2} display="inline" mr={1}>
                   Highlights:
                 </Text>

@@ -9,3 +9,4 @@ export * from './SectionDivider';
 export * from './SectionHeader';
 export * from './Skills';
 export * from './Title';
+export * from './ColorModeSwitcher';
