@@ -68,11 +68,11 @@ export const data = {
       text: `linkedin.com/in/nathan-dunn-aml`,
       link: `https://linkedin.com/in/nathan-dunn-aml`,
     },
-    {
-      icon: <AiFillGithub />,
-      text: `github.com/nathan-dunn`,
-      link: `https://github.com/nathan-dunn`,
-    },
+    // {
+    //   icon: <AiFillGithub />,
+    //   text: `github.com/nathan-dunn`,
+    //   link: `https://github.com/nathan-dunn`,
+    // },
   ],
   skills: [
     'JavaScript',
