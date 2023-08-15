@@ -52,7 +52,6 @@ export const SkillsMobile = () => {
   return (
     <VStack
       w="100%"
-      align="center"
       spacing={0}
       //  border="1px solid darkblue"
     >

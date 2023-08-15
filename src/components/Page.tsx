@@ -64,7 +64,11 @@ export const Page = () => {
   const { width } = useWindowSize();
   const isMobile = width <= settings.mobile;
 
-  return !isMobile ? (
+  if (isMobile) {
+    return <PageMobile />;
+  }
+
+  return (
     <Stack
       ref={windowRef}
       h="100%"
@@ -136,7 +140,15 @@ export const Page = () => {
         </HStack>
       </Grid>
     </Stack>
-  ) : (
+  );
+};
+
+export const PageMobile = () => {
+  const windowRef = useRef<any>(null);
+  const pageRef = useRef<any>(null);
+  const { width } = useWindowSize();
+
+  return (
     <Stack
       ref={windowRef}
       h="100%"
@@ -163,21 +175,38 @@ export const Page = () => {
 
         <VStack w="100%" align="center" justify="space-evenly" bg={colors.bg1} p={2}>
           <TitleMobile />
-          <ContactMobile />
         </VStack>
+        {/* <SectionDivider w="90%" /> */}
 
         <Box p={4} bg={colors.bg2} w="100%">
+          <ContactMobile />
+        </Box>
+        {/* <SectionDivider w="90%" /> */}
+
+        <Box p={4} bg={colors.bg1} w="100%">
           <SkillsMobile />
         </Box>
+        <SectionDivider w="90%" />
+
+        <Box p={4} bg={colors.bg1} w="100%">
+          <ExperienceMobile />
+        </Box>
+        <SectionDivider w="90%" />
 
         <HStack w="100%" align="flex-start" justify="space-evenly" bg={colors.bg1} px={6} py={2}>
           <EducationMobile />
-          <PersonalMobile />
+          {width >= 412 && <PersonalMobile />}
         </HStack>
 
-        <Box p={4} bg={colors.bg2} w="100%">
-          <ExperienceMobile />
-        </Box>
+        {width < 412 && (
+          <>
+            <SectionDivider w="90%" />
+
+            <Box p={4} bg={colors.bg1} w="100%">
+              <PersonalMobile />
+            </Box>
+          </>
+        )}
       </VStack>
     </Stack>
   );

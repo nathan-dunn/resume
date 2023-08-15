@@ -8,15 +8,21 @@ interface SectionDividerProps {
   bg?: string;
   my?: number;
   h?: number;
+  w?: string;
 }
 
 // can be used as a spacer -- don't pass in bg, and give it the my you want
-export const SectionDivider = ({ bg = colors.bg2, my = 0.5, h = 1 }: SectionDividerProps) => {
+export const SectionDivider = ({
+  bg = colors.bg2,
+  my = 0.5,
+  h = 1,
+  w = '100%',
+}: SectionDividerProps) => {
   return (
     <Divider
       orientation="horizontal"
       alignSelf="center"
-      w="100%"
+      w={w}
       h={h}
       bg={bg}
       color="transparent"

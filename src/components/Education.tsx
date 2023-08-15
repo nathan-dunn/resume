@@ -1,6 +1,5 @@
 import React from 'react';
 import { Text, UnorderedList, ListItem, VStack } from '@chakra-ui/react';
-import { useWindowSize } from 'usehooks-ts';
 import { SectionHeader, SectionHeaderMobile } from './SectionHeader';
 import { data } from '../config';
 
@@ -25,14 +24,12 @@ export const Education = () => {
 };
 
 export const EducationMobile = () => {
-  const { width } = useWindowSize();
-
   return (
     <VStack
       align="flex-start"
       spacing={0}
-      minW="50%"
-      //  border="1px solid darkblue"
+      w="60%"
+      // border="1px solid darkblue"
     >
       <SectionHeaderMobile title="EDUCATION" />
       <UnorderedList pl={1}>

@@ -54,7 +54,7 @@ export const TitleMobile = () => {
     >
       <Text
         color={colors.fc1}
-        fontSize={28}
+        fontSize={26}
         fontFamily={fonts.ff1}
         fontWeight={700}
         letterSpacing="2px"
@@ -63,7 +63,7 @@ export const TitleMobile = () => {
         {data.profile.name}
       </Text>
 
-      <Text color={colors.fc1} fontSize={18}>
+      <Text color={colors.fc1} fontSize={16}>
         {data.profile.title}
       </Text>
     </VStack>
