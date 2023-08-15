@@ -69,65 +69,68 @@ const data = {
   ],
   experience: [
     {
+      project: 'MARKETPLACE WEB',
+      description:
+        ' The web version of our Marketplace product where wholesale auto dealers can buy and sell vehicles online',
       employer: 'Integrated Auction Solutions',
-      jobTitle: 'Senior Frontend Engineer',
+      role: 'Senior Frontend Engineer',
       dates: 'Nov 2018 - Present',
-      projects: [
-        {
-          projectName: 'MARKETPLACE WEB',
-          details: [
-            'Project Description: The web version of our Marketplace product where wholesale auto dealers can buy and sell vehicles online',
-            `Tech: React, Redux, Redux-Persist, React-Router, Elasticsearch, webpack, Bootstrap, Semantic-UI, Node.js, Express, REST, SignalR, Firebase, 
-             GA4, Github Actions, Docker, Kubernetes, Google Cloud, AWS S3, AWS Fargate`,
-            `Created and maintained individual Marketplace web apps for our 12+ customers`,
-            `Implemented real-time bidding during live auctions using signalR`,
-            `Significantly improved performance and initial load time by code splitting, reducing bundle size, and bringing codebase from circa 2016 to 2023`,
-          ],
-        },
-        {
-          projectName: 'MARKETPLACE MOBILE',
-          details: [
-            'Project Description: The mobile version of our Marketplace product',
-            'Tech: iOS, Android, React-Native, Redux, React-Router-Native-Flux, Algolia, REST, SignalR, Firebase, GA4, Fastlane, Gradle, Expo',
-            `Created and maintained individual iOS and Android apps for our 12+ customers with highly customizable configurations, logos, and colors, but sharing a common codebase`,
-            `Incorporated our CORE product into Marketplace Mobile`,
-            `Set up Fastlane for switching customer configurations, creating builds, and pushing betas`,
-          ],
-        },
-        {
-          projectName: 'CORE',
-          details: [
-            `Project Description: Originally a mobile app used to add inventory, photos, and vehicle condition reports -- 
-            later the functionality was embedded into Marketplace Web and Marketplace Mobile`,
-            `Tech: iOS, React-Native, Redux, React-Router-Native-Flux, REST, Fastlane`,
-            'Batch photo uploads, interactive photo gallery (SpinCar, Black Widow), and AI condition reports (Ravin AI)',
-          ],
-        },
-        {
-          projectName: 'IAS CONNECT',
-          details: [
-            `Project Description: Custom authorization and authentication system for use with our Marketplace product`,
-            `Tech: Nextjs, React, Redux, Redux-Persist, sass, styled-components, Semantic-UI, Node.js, Express, PostgreSQL, MSSQL, Keycloak, Twilio, REST, 
-            JWTs, Github Actions, Docker, Kubernetes, Google Cloud, AWS Fargate`,
-            `Worked with our dev ops engineer to switch our builds from Kubernetes and Google Cloud to AWS Fargate`,
-          ],
-        },
+      tech: `React, Redux, Redux-Persist, React-Router, Elasticsearch, webpack, Bootstrap, Semantic-UI, Node.js, Express, REST, SignalR, Firebase, 
+      GA4, Github Actions, Docker, Kubernetes, Google Cloud, AWS S3, AWS Fargate`,
+      highlights: [
+        `Created and maintained individual Marketplace web apps for our 12+ customers`,
+        `Implemented real-time bidding during live auctions using signalR`,
+        `Significantly improved performance and initial load time by code splitting, reducing bundle size, and bringing codebase from circa 2016 to 2023`,
+      ],
+    },
+    {
+      project: 'MARKETPLACE MOBILE',
+      description: 'The mobile version of our Marketplace product',
+      employer: 'Integrated Auction Solutions',
+      role: 'Senior Frontend Engineer',
+      dates: 'Nov 2018 - Present',
+      tech: 'iOS, Android, React-Native, Redux, React-Router-Native-Flux, Algolia, REST, SignalR, Firebase, GA4, Fastlane, Gradle, Expo',
+      highlights: [
+        `Created and maintained individual iOS and Android apps for our 12+ customers with highly customizable configurations, logos, and colors, but sharing a common codebase`,
+        `Incorporated our CORE product into Marketplace Mobile`,
+        `Set up Fastlane for switching customer configurations, creating builds, and pushing betas`,
+      ],
+    },
+    {
+      project: 'CORE',
+      description: `Originally a mobile app used to add inventory, photos, and vehicle condition reports -- 
+      later the functionality was embedded into Marketplace Web and Marketplace Mobile`,
+      employer: 'Integrated Auction Solutions',
+      role: 'Senior Frontend Engineer',
+      dates: 'Nov 2018 - Present',
+      tech: 'iOS, React-Native, Redux, React-Router-Native-Flux, REST, Fastlane',
+      highlights: [
+        'Batch photo uploads, interactive photo gallery (SpinCar, Black Widow), and AI condition reports (Ravin AI)',
+      ],
+    },
+    {
+      project: 'IAS CONNECT',
+      description:
+        'Custom authorization and authentication system for use with our Marketplace product',
+      employer: 'Integrated Auction Solutions',
+      role: 'Senior Frontend Engineer',
+      dates: 'Nov 2018 - Present',
+      tech: `Nextjs, React, Redux, Redux-Persist, Sass, Semantic-UI, Node.js, Express, PostgreSQL, MSSQL, Keycloak, Twilio, REST, 
+      JWTs, Github Actions, Docker, Kubernetes, Google Cloud, AWS Fargate`,
+      highlights: [
+        `Worked with our dev ops engineer to switch our builds from Kubernetes and Google Cloud to AWS Fargate`,
       ],
     },
 
     {
+      project: 'Tiempo',
+      tech: 'React, Redux, React-Router, Passport, Jest, Enzyme, Tachyons, Node.js, Express, MongoDB, Mongoose, ',
+      description: 'Paid internship at a software development company in Austin, TX',
       employer: 'Moove-It',
-      jobTitle: 'Fullstack Developer',
+      role: 'Fullstack Developer',
       dates: 'May 2018 - Aug 2018',
-      projects: [
-        {
-          projectName: '',
-          details: [
-            'Paid internship at a software development company in Austin, TX',
-            'Worked on developing an internal time tracking app used for managing hours spent on different client projects',
-            // 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-          ],
-        },
+      highlights: [
+        'Worked on developing an internal time tracking app used for managing hours spent on different client projects',
       ],
     },
   ],

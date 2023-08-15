@@ -124,7 +124,7 @@ export const Page = () => {
             // border="1px solid red"
           >
             <Title />
-            <SectionDivider bg={theme.colors.backgroundColor3} my={1} />
+            <SectionDivider bg={theme.colors.backgroundColor3} h={1.5} my={1} />
             <Experience />
           </VStack>
         </HStack>

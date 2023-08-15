@@ -8,7 +8,7 @@ interface SectionDividerProps {
 }
 
 // can be used as a spacer -- don't pass in bg, and give it the my you want
-export const SectionDivider = ({ bg = 'transparent', my = 1, h = 1 }: SectionDividerProps) => {
+export const SectionDivider = ({ bg = 'transparent', my = 0.5, h = 1 }: SectionDividerProps) => {
   return (
     <Divider
       orientation="horizontal"
