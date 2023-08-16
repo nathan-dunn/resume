@@ -2,7 +2,9 @@ import React from 'react';
 import { ListItem, UnorderedList, VStack, HStack } from '@chakra-ui/react';
 import { useWindowSize } from 'usehooks-ts';
 import { SectionHeader, SectionHeaderMobile } from '.';
-import { data } from '../config';
+import { data, theme } from '../config';
+
+const { settings } = theme;
 
 interface SkillsListProps {
   list: string[];
@@ -51,7 +53,11 @@ export const SkillsMobile = () => {
     >
       <SectionHeaderMobile title="TECH SKILLS + TOOLS" />
 
-      <HStack w={width < 412 ? '100%' : '80%'} justify="center" align="flex-start">
+      <HStack
+        w={width < settings.tabletThreshold ? '100%' : '80%'}
+        justify="center"
+        align="flex-start"
+      >
         <SkillsList list={list1} width="33%" />
         <SkillsList list={list2} width="33%" />
         <SkillsList list={list3} width="33%" />

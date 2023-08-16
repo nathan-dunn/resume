@@ -45,7 +45,6 @@ export const Experience = () => {
           } = experience;
 
           const fontWeight = 600;
-          const fontWeight2 = 500;
 
           return (
             <ListItem

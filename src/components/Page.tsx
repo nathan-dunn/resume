@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
-import { Box, Grid, Button, Stack, HStack, VStack } from '@chakra-ui/react';
+import { Box, Grid, Stack, HStack, VStack } from '@chakra-ui/react';
 import {
-  ColorModeSwitcher,
   Contact,
   ContactMobile,
   Education,
@@ -19,50 +18,16 @@ import {
   Title,
   TitleMobile,
 } from '.';
-// import { useIsMobile } from '../hooks';
 import { useWindowSize } from 'usehooks-ts';
 import { theme } from '../config';
-import { jsPDF } from 'jspdf';
 
 const { colors, fonts, settings } = theme;
-
-interface PDFButtonProps {
-  pageRef: any;
-}
-
-const PDFButton = ({ pageRef }: PDFButtonProps) => {
-  const downloadPdf = () => {
-    const content = pageRef.current;
-    const doc = new jsPDF({});
-    doc.html(content, {
-      callback: doc => {
-        doc.save('resume-test.pdf');
-      },
-    });
-  };
-
-  return (
-    <Button
-      onClick={downloadPdf}
-      h="20px"
-      w="40px"
-      fontSize="12px"
-      variant="outline"
-      position="absolute"
-      bg={colors.backgroundColor3}
-      top={4}
-      left={4}
-    >
-      PDF
-    </Button>
-  );
-};
 
 export const Page = () => {
   const windowRef = useRef<any>(null);
   const pageRef = useRef<any>(null);
   const { width } = useWindowSize();
-  const isMobile = width <= settings.mobile;
+  const isMobile = width <= settings.mobileThreshold;
 
   if (isMobile) {
     return <PageMobile />;
@@ -83,14 +48,14 @@ export const Page = () => {
       <Grid
         ref={pageRef}
         h="100%"
-        w={settings.pageWidth}
+        w={settings.maxPageWidth}
         fontFamily={fonts.ff2}
         fontSize={fonts.fs1}
         color={colors.fc1}
         borderWidth="1px"
         p={0}
-        borderColor="lightgray"
         // boxShadow={`3px 3px 10px`}
+        // borderColor="lightgray"
         // border="1px dashed green"
       >
         <Header />
@@ -166,9 +131,9 @@ export const PageMobile = () => {
         fontFamily={fonts.ff2}
         fontSize={fonts.fs1}
         borderWidth="1px"
-        borderColor="lightgray"
         bg={colors.bg1}
         color={colors.fc1}
+        // borderColor="lightgray"
         // border="1px dashed green"
       >
         <HeaderMobile />
@@ -176,12 +141,10 @@ export const PageMobile = () => {
         <VStack w="100%" align="center" justify="space-evenly" bg={colors.bg1} p={2}>
           <TitleMobile />
         </VStack>
-        {/* <SectionDivider w="90%" /> */}
 
         <Box p={4} bg={colors.bg2} w="100%">
           <ContactMobile />
         </Box>
-        {/* <SectionDivider w="90%" /> */}
 
         <Box p={4} bg={colors.bg1} w="100%">
           <SkillsMobile />
@@ -195,10 +158,10 @@ export const PageMobile = () => {
 
         <HStack w="100%" align="flex-start" justify="space-evenly" bg={colors.bg1} px={6} py={2}>
           <EducationMobile />
-          {width >= 412 && <PersonalMobile />}
+          {width >= settings.tabletThreshold && <PersonalMobile />}
         </HStack>
 
-        {width < 412 && (
+        {width < settings.tabletThreshold && (
           <>
             <SectionDivider w="90%" />
 

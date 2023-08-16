@@ -4,6 +4,7 @@ export * from './Education';
 export * from './Experience';
 export * from './Header';
 export * from './Page';
+export * from './PDFButton';
 export * from './Personal';
 export * from './Photo';
 export * from './SectionDivider';

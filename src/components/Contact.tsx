@@ -2,7 +2,9 @@ import React from 'react';
 import { Flex, Box, Text, Link, VStack, HStack } from '@chakra-ui/react';
 import { useWindowSize } from 'usehooks-ts';
 import { SectionHeader } from './SectionHeader';
-import { data } from '../config';
+import { data, theme } from '../config';
+
+const { settings } = theme;
 
 export const Contact = () => {
   return (
@@ -36,7 +38,7 @@ export const Contact = () => {
 
 export const ContactMobile = () => {
   const { width } = useWindowSize();
-  const columns = width < 412 ? 1 : 2;
+  const columns = width < settings.tabletThreshold ? 1 : 2;
   const part = Math.ceil(data.contacts.length / columns);
   const list1 = data.contacts.slice(0, part);
   const list2 = data.contacts.slice(part);

@@ -4,9 +4,10 @@ import { extendTheme } from '@chakra-ui/react';
 import { mode } from '@chakra-ui/theme-tools';
 
 // measurements
-const mobile = 768;
-const pageWidth = 738;
+const maxPageWidth = 738;
 const minPageWidth = 390;
+const mobileThreshold = 768;
+const tabletThreshold = 412;
 const pageSplit = '31%';
 
 // colors
@@ -29,7 +30,7 @@ const fs2 = 14;
 
 export const theme = extendTheme({
   config: { initialColorMode: 'dark', useSystemColorMode: true },
-  settings: { pageWidth, minPageWidth, pageSplit, mobile },
+  settings: { maxPageWidth, minPageWidth, pageSplit, mobileThreshold, tabletThreshold },
   colors: { chakraBlueGray, light, dark, tc1, tc2, bg1, bg2, fc1, fc2 },
   fonts: { ff1, ff2, fs1, fs2 },
   breakpoints: { sm: '320px', md: '768px', lg: '960px', xl: '1200px', '2xl': '1536px' },
@@ -82,21 +83,23 @@ export const data = {
     'Next.js',
     'HTML',
     'CSS/Sass',
-    'Jest',
     'Elasticsearch',
     'Algolia',
-    'XCode / Android Studio',
-
+    'Android Studio',
     'iOS / Android',
     'Node.js',
     'Express',
+    'Git / Git Hub',
     `MSSQL / PostgreSQL`,
     'MongoDb',
     'REST',
     'SignalR',
     'Docker',
-    'AWS',
-    'Git / Git Hub',
+    'Kubernetes',
+    'Google Analytics',
+    'Amazon AWS',
+    'XCode',
+    'Google Cloud',
   ],
   education: [
     'Hack Reactor Software Engineering Bootcamp, Los Angeles 2017',
@@ -112,7 +115,7 @@ export const data = {
     I get a great amount of satisfaction out of what some call the daily grind. 💻  + ☕ = 🤩`,
 
     `I live outside Fort Worth, TX with my wife, three young children, and our German Shepherd, Luna. 
-    When I'm not spending time with my family I enjoy reading, working out, and traveling.`,
+    My free time is spent with my family, reading, working out, and traveling`,
   ],
 
   experience: [

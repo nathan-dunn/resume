@@ -8,7 +8,7 @@ const { colors, settings } = theme;
 export const Header = () => {
   return (
     <Box
-      width={settings.pageWidth}
+      width={settings.maxPageWidth - 2} // account for border
       position="absolute"
       // border="1px dashed darkblue"
     >
@@ -53,7 +53,6 @@ export const HeaderMobile = () => {
       width={_width}
       minW="100vw"
       position="absolute"
-
       // border="1px dashed darkblue"
     >
       <Box
