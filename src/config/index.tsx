@@ -100,15 +100,21 @@ export const data = {
   ],
   education: [
     'Hack Reactor Software Engineering Bootcamp, Los Angeles 2017',
-    ' CSU Long Beach - M.S. Kinesiology',
-    ' CSU Long Beach - B.S. Kinesiology',
+    'CSU Long Beach - M.S. Kinesiology',
+    'CSU Long Beach - B.S. Kinesiology',
   ],
 
   personal: [
-    'I live outside Fort Worth with my wife, three young children, and our German Shepherd.',
-    "When I'm not spending time with my family I enjoy reading, working out, and traveling.",
-    'I was a Police Officer for 13 years before making a career change in 2017.',
+    `I learned to code in 2015 while recovering from a work-related injury,
+    and in 2017 I left my job as a Police Officer to pursue my new career.`,
+
+    `My professional experience has been mostly frontend development, however, I really enjoy working both sides of the stack.
+    I get a great amount of satisfaction out of what some call the daily grind. 💻  + ☕ = 🤩`,
+
+    `I live outside Fort Worth, TX with my wife, three young children, and our German Shepherd, Luna. 
+    When I'm not spending time with my family I enjoy reading, working out, and traveling.`,
   ],
+
   experience: [
     {
       project: 'MARKETPLACE WEB',

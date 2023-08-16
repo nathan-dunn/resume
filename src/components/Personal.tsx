@@ -13,7 +13,11 @@ export const Personal = () => {
     >
       <SectionHeader title="PERSONAL" />
       <Box>
-        <Text textAlign="justify">{data.personal.join(' ')}</Text>
+        {data.personal.map((item: string, index: number) => (
+          <Text key={index} textAlign="justify" mb={2}>
+            {item}
+          </Text>
+        ))}
       </Box>
     </VStack>
   );
@@ -28,7 +32,13 @@ export const PersonalMobile = () => {
       // border="1px solid darkblue"
     >
       <SectionHeaderMobile title="PERSONAL" />
-      <Text textAlign="justify">{data.personal.join(' ')}</Text>
+      <Box>
+        {data.personal.map((item: string, index: number) => (
+          <Text key={index} textAlign="justify" mb={2}>
+            {item}
+          </Text>
+        ))}
+      </Box>
     </VStack>
   );
 };

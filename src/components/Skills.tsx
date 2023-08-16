@@ -27,7 +27,6 @@ export const Skills = () => {
   return (
     <VStack w="100%" align="flex-start" spacing={0}>
       <SectionHeader title="TECH SKILLS + TOOLS" />
-
       <HStack w="100%" spacing={0} justify="space-between" align="flex-start">
         <SkillsList list={list1} width="50%" />
         <SkillsList list={list2} width="50%" />
