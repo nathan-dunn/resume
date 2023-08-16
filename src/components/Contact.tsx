@@ -9,11 +9,10 @@ export const Contact = () => {
     <VStack
       w="100%"
       align="flex-start"
-      spacing={0}
+      spacing={1}
       // border="1px solid darkblue"
     >
       <SectionHeader title="CONTACT" />
-
       {data.contacts.map((contact: any, index: number) => (
         <Link
           key={index}

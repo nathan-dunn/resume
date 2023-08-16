@@ -111,7 +111,7 @@ export const Page = () => {
             pr={4}
             pb={4}
             bg={colors.bg2}
-            spacing={5}
+            spacing={6}
             // border="1px solid red"
           >
             <Photo />

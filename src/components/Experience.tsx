@@ -12,12 +12,7 @@ interface BulletProps {
 }
 
 const Bullet = ({ label, value }: BulletProps) => (
-  <Text mb={0} align="justify" fontSize={fonts.fs1}>
-    <Text fontWeight="500" display="inline" mr={1}>
-      {`• ${label}:`}
-    </Text>
-    {value}
-  </Text>
+  <Text fontSize={fonts.fs1} align="justify">{`• ${label}: ${value}`}</Text>
 );
 
 export const Experience = () => {
