@@ -25,16 +25,10 @@ export const Skills = () => {
   const list2 = data.skills.slice(part);
 
   return (
-    <VStack
-      w="100%"
-      align="flex-start"
-      spacing={0}
-
-      // border="1px solid darkblue"
-    >
+    <VStack w="100%" align="flex-start" spacing={0}>
       <SectionHeader title="TECH SKILLS + TOOLS" />
 
-      <HStack w="100%" spacing={0} justify="space-between">
+      <HStack w="100%" spacing={0} justify="space-between" align="flex-start">
         <SkillsList list={list1} width="50%" />
         <SkillsList list={list2} width="50%" />
       </HStack>
