@@ -81,25 +81,24 @@ export const data = {
     'React',
     'React Native',
     'Next.js',
-    'HTML',
+    'HTML5',
     'CSS/Sass',
     'Elasticsearch',
     'Algolia',
+    'Xcode',
     'Android Studio',
     'iOS / Android',
     'Node.js',
-    'Express',
-    'Git / Git Hub',
-    `MSSQL / PostgreSQL`,
-    'MongoDb',
+    `PostgreSQL / MSSQL`,
+    'MongoDB',
     'REST',
+    'Firebase + GA4',
     'SignalR',
     'Docker',
     'Kubernetes',
-    'Google Analytics',
-    'Amazon AWS',
-    'XCode',
     'Google Cloud',
+    'Amazon AWS',
+    'Git / Git Hub',
   ],
   education: [
     'Hack Reactor Software Engineering Bootcamp, Los Angeles 2017',
@@ -112,10 +111,10 @@ export const data = {
     and in 2017 I left my job as a Police Officer to pursue my new career.`,
 
     `My professional experience has been mostly frontend development, however, I really enjoy working both sides of the stack.
-    I get a great amount of satisfaction out of what some call the daily grind. 💻  + ☕ = 🤩`,
+    I get a great amount of satisfaction out of what some call the daily grind  💻  + ☕ = 🤩`,
 
-    `I live outside Fort Worth, TX with my wife, three young children, and our German Shepherd, Luna. 
-    My free time is spent with my family, reading, working out, and traveling`,
+    `I live outside Fort Worth with my wife, three young children, and our German Shepherd, Luna. 
+    My free time is spent with my family, reading, working out, and traveling.`,
   ],
 
   experience: [
