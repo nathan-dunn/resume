@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Box, Grid, Stack, HStack, VStack } from '@chakra-ui/react';
 import {
   Contact,
@@ -29,6 +29,8 @@ export const Page = () => {
   const { width } = useWindowSize();
   const isMobile = width <= settings.mobileThreshold;
 
+  const [hasBoxShadow, setHasBoxShadow] = useState(true);
+
   if (isMobile) {
     return <PageMobile />;
   }
@@ -52,10 +54,9 @@ export const Page = () => {
         fontFamily={fonts.ff2}
         fontSize={fonts.fs1}
         color={colors.fc1}
-        borderWidth="1px"
         p={0}
-        // boxShadow={`3px 3px 10px`}
-        // borderColor="lightgray"
+        outline="none"
+        boxShadow={hasBoxShadow ? `3px 3px 10px` : 'none'}
         // border="1px dashed green"
       >
         <Header />
@@ -121,6 +122,8 @@ export const PageMobile = () => {
       minW={settings.minPageWidth}
       align="center"
       backgroundColor="#F0F0F0"
+      border="none"
+      outline="none"
     >
       <VStack
         ref={pageRef}
@@ -130,10 +133,10 @@ export const PageMobile = () => {
         spacing={2}
         fontFamily={fonts.ff2}
         fontSize={fonts.fs1}
-        borderWidth="1px"
         bg={colors.bg1}
         color={colors.fc1}
-        // borderColor="lightgray"
+        border="none"
+        outline="none"
         // border="1px dashed green"
       >
         <HeaderMobile />
@@ -146,17 +149,17 @@ export const PageMobile = () => {
           <ContactMobile />
         </Box>
 
-        <Box p={4} bg={colors.bg1} w="100%">
+        <Box p={4} w="100%">
           <SkillsMobile />
         </Box>
         <SectionDivider w="90%" />
 
-        <Box p={4} bg={colors.bg1} w="100%">
+        <Box p={4} w="100%">
           <ExperienceMobile />
         </Box>
         <SectionDivider w="90%" />
 
-        <HStack w="100%" align="flex-start" justify="space-evenly" bg={colors.bg1} px={6} py={2}>
+        <HStack w="100%" align="flex-start" justify="space-evenly" px={6} py={2}>
           <EducationMobile />
           {width >= settings.tabletThreshold && <PersonalMobile />}
         </HStack>
@@ -165,7 +168,7 @@ export const PageMobile = () => {
           <>
             <SectionDivider w="90%" />
 
-            <Box p={4} bg={colors.bg1} w="100%">
+            <Box p={4} w="100%">
               <PersonalMobile />
             </Box>
           </>

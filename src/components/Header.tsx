@@ -8,7 +8,7 @@ const { colors, settings } = theme;
 export const Header = () => {
   return (
     <Box
-      width={settings.maxPageWidth - 2} // account for border
+      width={settings.maxPageWidth}
       position="absolute"
       // border="1px dashed darkblue"
     >
