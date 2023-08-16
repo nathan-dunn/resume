@@ -7,7 +7,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "surge": "NODE_ENV=production yarn build && surge --project ./build --domain https://nathan-dunn-resume.surge.sh/ && surge --project ./build --domain https://nathan-dunn.surge.sh/"
+    "resume": "NODE_ENV=production yarn build && surge --project ./build --domain https://nathan-dunn-resume.surge.sh/",
+    "site": "NODE_ENV=production yarn build && surge --project ./build --domain https://nathan-dunn.surge.sh/"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.8.0",
