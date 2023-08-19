@@ -14,7 +14,7 @@ export const Education = () => {
       <SectionHeader title="EDUCATION" />
       <UnorderedList pl={1}>
         {data.education.map((item, index) => (
-          <ListItem key={index} mb={2}>
+          <ListItem key={index} mb={1}>
             <Text>{item}</Text>
           </ListItem>
         ))}

@@ -11,7 +11,7 @@ export const Contact = () => {
     <VStack
       w="100%"
       align="flex-start"
-      spacing={1}
+      spacing={0}
       // border="1px solid darkblue"
     >
       <SectionHeader title="CONTACT" />

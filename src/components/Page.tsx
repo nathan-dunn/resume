@@ -26,8 +26,8 @@ const { colors, fonts, settings } = theme;
 export const Page = () => {
   const windowRef = useRef<any>(null);
   const pageRef = useRef<any>(null);
-  const [leftRef, { width: leftWidth, height: leftHeight }] = useElementSize();
-  const [rightRef, { width: rightWidth, height: rightHeight }] = useElementSize();
+  const [leftRef, { height: leftHeight }] = useElementSize();
+  const [rightRef, { height: rightHeight }] = useElementSize();
 
   const { width } = useWindowSize();
   const isMobile = width <= settings.mobileThreshold;
@@ -84,13 +84,13 @@ export const Page = () => {
             pr={4}
             pb={4}
             bg={colors.bg2}
-            spacing={6}
+            spacing={3}
             // border="1px solid red"
           >
             <Photo />
             <Contact />
-            <Education />
             <Skills />
+            <Education />
             <Personal />
           </VStack>
 

@@ -88,6 +88,7 @@ export const data = {
     'Xcode',
     'Android Studio',
     'iOS / Android',
+
     'Node.js',
     `PostgreSQL / MSSQL`,
     'MongoDB',
@@ -95,10 +96,10 @@ export const data = {
     'Firebase + GA4',
     'SignalR',
     'Docker',
-    'Kubernetes',
     'Google Cloud',
     'Amazon AWS',
     'Git / Git Hub',
+    'Jira / Monday',
   ],
   education: [
     'Hack Reactor Software Engineering Bootcamp, Los Angeles 2017',
@@ -107,71 +108,93 @@ export const data = {
   ],
 
   personal: [
-    `I learned to code in 2015 while recovering from a work-related injury,
-    and in 2017 I left my job as a Police Officer to pursue my new career.`,
-
     `My professional experience has been mostly frontend development, however, I really enjoy working both sides of the stack.
     I get a great amount of satisfaction out of what some call the daily grind  💻  + ☕ = 🤩`,
 
-    `I live outside Fort Worth with my wife, three young children, and our German Shepherd, Luna. 
-    My free time is spent with my family, reading, working out, and traveling.`,
+    `I always have a personal code project going and my free time is spent with my family, reading, working out, or taking online coding courses.`,
+
+    `I was a Police Officer in Long Beach, CA from 2004 to 2017`,
+
+    `I live outside Fort Worth with my wife, three young children, and our German Shepherd, Luna.`,
   ],
 
   experience: [
     {
-      project: 'MARKETPLACE WEB',
       employer: 'Integrated Auction Solutions',
-      title: 'Senior Frontend Engineer',
       dates: 'Nov 2018 - Present',
-      overview: `Our Marketplace product is where wholesale auto dealers can buy and sell vehicles online. 
-      As leader developer since 2022 I created and maintained individual Marketplace web apps for our 12+ customers, was responsible for all bug fixes & features including
-      implementing real-time bidding during live auctions, 
-      significantly improving performance and initial load time by code splitting, reducing bundle size, and bringing codebase from circa 2016 to 2023.`,
-      tech: `React, Redux, Redux-Persist, React-Router, Elasticsearch, webpack, Bootstrap, Semantic-UI, Node.js, Express, REST, SignalR, Firebase, 
-      GA4, Github Actions, Docker, Kubernetes, Google Cloud, AWS S3, AWS Fargate`,
+      title: 'Senior Frontend Engineer',
+      projects: [
+        {
+          name: 'MARKETPLACE MOBILE',
+          role: 'Lead Developer',
+          tech: 'iOS, Android, React-Native, Redux, React-Router-Native-Flux, Algolia, REST, SignalR, Firebase, GA4, Fastlane, Gradle, Expo',
+          details: [
+            `Online Marketplace / Auction mobile apps for wholesale auto dealers`,
+            `Multi-tenant React Native application for iOS and Android`,
+            `Used Algolia and InstantSearch for searching inventory with dynamic indexes`,
+            `SignalR + REST for realtime bidding and buying + live video streaming`,
+            `Setup Firebase with Google Analytics and Messaging`,
+            `Recently implemented Fastlane for switching customer configurations and pipeline for app deployments`,
+          ],
+        },
+        {
+          name: 'MARKETPLACE WEB',
+          role: 'Lead Developer',
+          tech: `React, Redux, Redux-Persist, React-Router, Elasticsearch, webpack, Bootstrap, Semantic-UI, Node.js, Express, REST, SignalR, Firebase, GA4, Github Actions, Docker, Kubernetes, Google Cloud, AWS S3, AWS Fargate`,
+          details: [
+            `Online Marketplace / Auction sites for wholesale auto dealers`,
+            `Multi-tenant React application for web using Redux, webpack, Semantic-UI, node.js + Express`,
+            `Used Elasticsearch and Searchkit for searching inventory with dynamic indexes`,
+            `Built and deployed using GitHub Actions, Docker, and AWS Fargate (previously Kubernetes and Google Cloud)`,
+            `Recently improved load times by reducing bundle size 40%, code splitting, and bringing codebase from 2016 to 2023`,
+          ],
+        },
+        {
+          name: 'CORE MOBILE',
+          role: 'Lead Developer',
+          tech: 'iOS, React-Native, Redux, React-Router-Native-Flux, REST, Fastlane',
+          details: [
+            `React native iOS app used to add vehicle inventory and condition reports`,
+            `Helped bring all functionality into Marketplace Web and Marketplace Mobile projects`,
+            `Engineered method of batch uploading photos to server`,
+            `Integrated third-party AI condition reports`,
+            `Recently rebuilt a custom camera view using Expo`,
+          ],
+        },
+        {
+          name: 'IAS CONNECT',
+          role: 'Lead Developer',
+          tech: `Nextjs, React, Redux, Redux-Persist, Sass, Semantic-UI, Node.js, Express, PostgreSQL, MSSQL, Keycloak, Twilio, REST, JWTs, Github Actions, Docker, Kubernetes, Google Cloud, AWS Fargate`,
+          details: [
+            `Custom authentication / authorization system for Marketplace projects`,
+            `Server-side web app built with a Next.js + React frontend and a Node.js + Express server`,
+            `Recently implemented custom pool manager to more efficiently connect to Postgres and MSSQL databases and fix memory leak`,
+            `Built and deployed using GitHub Actions, Docker, and AWS Fargate`,
+          ],
+        },
+      ],
     },
     {
-      project: 'MARKETPLACE MOBILE',
-      employer: 'Integrated Auction Solutions',
-      title: 'Senior Frontend Engineer',
-      dates: 'Nov 2018 - Present',
-      overview: `Our Marketplace product is where wholesale auto dealers can buy and sell vehicles online. 
-      As leader developer since 2022 I created and maintained individual iOS and Android apps for our 12+ customers, was responsible for all bug fixes & features including
-      incorporated our CORE product into Marketplace Mobile, and setting up Fastlane for switching customer configurations, creating builds, and pushing betas`,
-      tech: 'iOS, Android, React-Native, Redux, React-Router-Native-Flux, Algolia, REST, SignalR, Firebase, GA4, Fastlane, Gradle, Expo',
-    },
-    {
-      project: 'CORE',
-      employer: 'Integrated Auction Solutions',
-      title: 'Senior Frontend Engineer',
-      dates: 'Nov 2018 - Present',
-      overview: `CoRe was originally a mobile only app used to add inventory, photos, and vehicle condition reports but  
-      later incorporated into our Marketplace Web and Marketplace Mobile projects. 
-      As lead developer since 2022 I was responsible for for all bug fixes & features including 
-      batch photo uploads, an interactive photo gallery (SpinCar, Black Widow), and incorporating third-party AI condition reports`,
-      tech: 'iOS, React-Native, Redux, React-Router-Native-Flux, REST, Fastlane',
-    },
-    {
-      project: 'IAS CONNECT',
-      employer: 'Integrated Auction Solutions',
-      title: 'Senior Frontend Engineer',
-      dates: 'Nov 2018 - Present',
-      overview: `IAS Connect is our custom authorization and authentication system for our Marketplace product.
-        As lead developer since 2022 I was responsible for for all bug fixes & features including 
-        a joint task with our dev ops engineer to migrate our builds from Kubernetes and Google Cloud to AWS Fargate
-        `,
-      tech: `Nextjs, React, Redux, Redux-Persist, Sass, Semantic-UI, Node.js, Express, PostgreSQL, MSSQL, Keycloak, Twilio, REST, 
-      JWTs, Github Actions, Docker, Kubernetes, Google Cloud, AWS Fargate`,
-    },
-
-    {
-      project: 'TIEMPO',
       employer: 'Moove-It',
       title: 'Fullstack Developer',
       dates: 'May 2018 - Aug 2018',
-      tech: 'React, Redux, React-Router, Passport, Jest, Enzyme, Tachyons, Node.js, Express, MongoDB, Mongoose, ',
-      overview: `This was a paid internship at a software development company in Austin, TX. 
-      I worked on an internal time-tracking app used for managing hours spent on client projects `,
+      projects: [
+        {
+          name: 'TIEMPO',
+          role: 'Intern',
+          tech: 'React, Redux, React-Router, Passport, Jest, Enzyme, Tachyons, Node.js, Express, MongoDB, Mongoose',
+          details: [
+            `Paid internship at a software development company in Austin, TX`,
+            `Bootstrapped an internal time-tracking app used for managing hours spent on client projects`,
+          ],
+        },
+      ],
     },
+    // {
+    //   employer: 'Long Beach Police Department',
+    //   title: 'Police Officer',
+    //   dates: 'Jun 2004 - Mar 2017',
+    //   details: [`Medically retired in 2017`],
+    // },
   ],
 };

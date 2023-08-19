@@ -1,18 +1,23 @@
 import React from 'react';
-import { Flex, Text, ListItem, List, VStack } from '@chakra-ui/react';
+import { Flex, Text, ListItem, List, VStack, UnorderedList } from '@chakra-ui/react';
 import { SectionHeader, SectionHeaderMobile } from './SectionHeader';
 import { SectionDivider } from './SectionDivider';
 import { data, theme } from '../config';
 
 const { colors, fonts } = theme;
 
-interface BulletProps {
-  label: string;
-  value: string;
+interface BulletListProps {
+  list: string[];
 }
 
-const Bullet = ({ label, value }: BulletProps) => (
-  <Text fontSize={fonts.fs1} align="justify">{`• ${label}: ${value}`}</Text>
+const BulletList = ({ list }: BulletListProps) => (
+  <UnorderedList pl={2}>
+    {(list || []).map((str, index) => (
+      <ListItem key={index} mb={0.5}>
+        <Text key={index}>{str}</Text>
+      </ListItem>
+    ))}
+  </UnorderedList>
 );
 
 export const Experience = () => {
@@ -28,50 +33,41 @@ export const Experience = () => {
 
       <List mt={1}>
         {data.experience.map((experience, experienceIndex) => {
-          const {
-            project,
-            employer,
-            title,
-            dates,
-            overview,
-            tech,
-          }: {
-            project: string;
-            employer: string;
-            title: string;
-            dates: string;
-            overview: string;
-            tech: string;
-          } = experience;
-
           const fontWeight = 600;
+          const { employer, title, dates }: { employer: string; dates: string; title: string } =
+            experience;
 
           return (
             <ListItem
               key={experienceIndex}
-              mb={experienceIndex === data.experience.length - 1 ? 0 : 6}
+              pb={3}
+              // border="1px solid darkblue"
             >
-              {/* PROJECT NAME + EMPLOYER */}
-              <Flex
-                justify="space-between"
-                fontSize={fonts.fs1}
-                fontWeight={fontWeight}
-                letterSpacing="1px"
-              >
-                <Text>{project}</Text>
-                <Text>{employer}</Text>
-              </Flex>
-
-              {/* JOB TITLE + DATES */}
               <Flex justify="space-between" fontSize={fonts.fs1} fontWeight={fontWeight}>
-                <Text>{title}</Text>
+                <Text letterSpacing="1px">{employer.toUpperCase()}</Text>
                 <Text>{dates}</Text>
               </Flex>
 
-              <SectionDivider h={0.5} />
+              <Flex>
+                <Text>{title}</Text>
+              </Flex>
 
-              <Bullet label="Overview" value={overview} />
-              <Bullet label="Tech" value={tech} />
+              <SectionDivider h={0.5} my={1.5} />
+
+              <List>
+                {(experience.projects || []).map((project, projectIndex) => {
+                  const { name, role }: { name: string; role: string } = project;
+                  return (
+                    <ListItem key={projectIndex} mb={4}>
+                      <Flex mb={1}>
+                        <Text as="i">{`${name} Project (${role})`}</Text>
+                      </Flex>
+
+                      <BulletList list={project.details} />
+                    </ListItem>
+                  );
+                })}
+              </List>
             </ListItem>
           );
         })}
@@ -89,55 +85,45 @@ export const ExperienceMobile = () => {
       spacing={0}
       // border="1px solid darkblue"
     >
-      <SectionHeaderMobile title="WORK EXPERIENCE" />
+      <SectionHeaderMobile color={colors.fc2} title="WORK EXPERIENCE" />
 
       <List mt={1}>
         {data.experience.map((experience, experienceIndex) => {
-          const {
-            project,
-            employer,
-            title,
-            dates,
-            overview,
-            tech,
-          }: {
-            project: string;
-            employer: string;
-            title: string;
-            dates: string;
-            overview: string;
-            tech: string;
-          } = experience;
-
           const fontWeight = 600;
+          const { employer, title, dates }: { employer: string; dates: string; title: string } =
+            experience;
 
           return (
             <ListItem
               key={experienceIndex}
-              mb={experienceIndex === data.experience.length - 1 ? 0 : 6}
+              pb={3}
+              // border="1px solid darkblue"
             >
-              {/* PROJECT NAME + EMPLOYER */}
-              <Flex
-                justify="space-between"
-                fontSize={fonts.fs1}
-                fontWeight={fontWeight}
-                letterSpacing="1px"
-              >
-                <Text>{project}</Text>
-                <Text>{employer}</Text>
-              </Flex>
-
-              {/* JOB TITLE + DATES */}
               <Flex justify="space-between" fontSize={fonts.fs1} fontWeight={fontWeight}>
-                <Text>{title}</Text>
+                <Text letterSpacing="1px">{employer.toUpperCase()}</Text>
                 <Text>{dates}</Text>
               </Flex>
 
-              <SectionDivider h={0.5} />
+              <Flex>
+                <Text>{title}</Text>
+              </Flex>
 
-              <Bullet label="Overview" value={overview} />
-              <SectionDivider h={0.5} bg="transparent" />
-              <Bullet label="Tech" value={tech} />
+              <SectionDivider h={0.5} my={1.5} />
+
+              <List>
+                {(experience.projects || []).map((project, projectIndex) => {
+                  const { name, role }: { name: string; role: string } = project;
+                  return (
+                    <ListItem key={projectIndex} mb={4}>
+                      <Flex mb={1}>
+                        <Text as="i">{`${name} Project (${role})`}</Text>
+                      </Flex>
+
+                      <BulletList list={project.details} />
+                    </ListItem>
+                  );
+                })}
+              </List>
             </ListItem>
           );
         })}
