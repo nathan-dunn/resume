@@ -18,7 +18,7 @@ import {
   Title,
   TitleMobile,
 } from '.';
-import { useWindowSize } from 'usehooks-ts';
+import { useWindowSize, useElementSize } from 'usehooks-ts';
 import { theme } from '../config';
 
 const { colors, fonts, settings } = theme;
@@ -26,10 +26,13 @@ const { colors, fonts, settings } = theme;
 export const Page = () => {
   const windowRef = useRef<any>(null);
   const pageRef = useRef<any>(null);
+  const [leftRef, { width: leftWidth, height: leftHeight }] = useElementSize();
+  const [rightRef, { width: rightWidth, height: rightHeight }] = useElementSize();
+
   const { width } = useWindowSize();
   const isMobile = width <= settings.mobileThreshold;
 
-  const [hasBoxShadow, setHasBoxShadow] = useState(true);
+  const [hasBoxShadow, setHasBoxShadow] = useState(false);
 
   if (isMobile) {
     return <PageMobile />;
@@ -41,38 +44,42 @@ export const Page = () => {
       h="100%"
       minH="100vh"
       w="100%"
+      maxW="100vw"
       align="center"
       backgroundColor="#F0F0F0"
       p={3}
-      overflow="auto"
+      overflowY="auto"
+      overflowX="hidden"
       // border="1px dashed orange"
     >
       <Grid
         ref={pageRef}
         h="100%"
         w={settings.maxPageWidth}
+        maxW="100vw"
         fontFamily={fonts.ff2}
         fontSize={fonts.fs1}
         color={colors.fc1}
         p={0}
         outline="none"
         boxShadow={hasBoxShadow ? `3px 3px 10px` : 'none'}
+        overflowY="auto"
+        overflowX="hidden"
         // border="1px dashed green"
       >
         <Header />
         <HStack
           w="100%"
-          h="100%"
-          minH="100%"
           spacing={0}
           align="flex-start"
           // border="1px dashed gold"
         >
           {/* LEFT SIDE */}
           <VStack
+            ref={leftRef}
             maxW={settings.pageSplit}
             minW={settings.pageSplit}
-            h="full"
+            minH={rightHeight}
             pl={4}
             pr={4}
             pb={4}
@@ -89,8 +96,9 @@ export const Page = () => {
 
           {/* RIGHT SIDE */}
           <VStack
+            ref={rightRef}
             w="100%"
-            h="full"
+            minH={leftHeight}
             justify="flex-start"
             spacing={2}
             pl={4}
