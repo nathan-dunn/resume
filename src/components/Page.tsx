@@ -24,15 +24,15 @@ import { theme } from '../config';
 const { colors, fonts, settings } = theme;
 
 export const Page = () => {
-  const windowRef = useRef<any>(null);
-  const pageRef = useRef<any>(null);
+  const windowRef = useRef<HTMLHeadingElement>(null);
+  const pageRef = useRef<HTMLHeadingElement>(null);
   const [leftRef, { height: leftHeight }] = useElementSize();
   const [rightRef, { height: rightHeight }] = useElementSize();
 
   const { width } = useWindowSize();
   const isMobile = width <= settings.mobileThreshold;
 
-  const [hasBoxShadow, setHasBoxShadow] = useState(false);
+  const [hasBoxShadow] = useState(false);
 
   if (isMobile) {
     return <PageMobile />;
@@ -118,8 +118,8 @@ export const Page = () => {
 };
 
 export const PageMobile = () => {
-  const windowRef = useRef<any>(null);
-  const pageRef = useRef<any>(null);
+  const windowRef = useRef<HTMLHeadingElement>(null);
+  const pageRef = useRef<HTMLHeadingElement>(null);
   const { width } = useWindowSize();
 
   return (

@@ -17,7 +17,7 @@ export const SectionDivider = ({
   my = 0.5,
   h = 1,
   w = '100%',
-}: SectionDividerProps) => {
+}: SectionDividerProps): JSX.Element => {
   return (
     <Divider
       orientation="horizontal"

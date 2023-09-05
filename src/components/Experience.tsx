@@ -10,7 +10,7 @@ interface BulletListProps {
   list: string[];
 }
 
-const BulletList = ({ list }: BulletListProps) => (
+const BulletList = ({ list }: BulletListProps): JSX.Element => (
   <UnorderedList pl={2}>
     {(list || []).map((str, index) => (
       <ListItem key={index} mb={0.5}>

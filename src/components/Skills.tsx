@@ -11,7 +11,7 @@ interface SkillsListProps {
   width: string;
 }
 
-const SkillsList = ({ list, width }: SkillsListProps) => (
+const SkillsList = ({ list, width }: SkillsListProps): JSX.Element => (
   <UnorderedList pl={1} w={width}>
     {list.map((item: string, index: number) => (
       <ListItem key={index} mb={0}>

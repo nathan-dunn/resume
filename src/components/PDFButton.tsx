@@ -8,7 +8,7 @@ interface PDFButtonProps {
   pageRef: any;
 }
 
-export const PDFButton = ({ pageRef }: PDFButtonProps) => {
+export const PDFButton = ({ pageRef }: PDFButtonProps): JSX.Element => {
   const downloadPdf = () => {
     const content = pageRef.current;
     const doc = new jsPDF({});
