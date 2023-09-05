@@ -9,7 +9,8 @@
     "eject": "react-scripts eject",
     "resume": "NODE_ENV=production yarn build && surge --project ./build --domain https://nathan-dunn-resume.surge.sh/",
     "site": "NODE_ENV=production yarn build && surge --project ./build --domain https://nathan-dunn.surge.sh/",
-    "draft": "NODE_ENV=production yarn build && surge --project ./build --domain https://nathan-dunn-draft.surge.sh/"
+    "draft": "NODE_ENV=production yarn build && surge --project ./build --domain https://nathan-dunn-draft.surge.sh/",
+    "lint": "npx eslint src"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.8.0",
@@ -36,8 +37,11 @@
     "usehooks-ts": "^2.9.1",
     "web-vitals": "^2.1.4"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "eslint": "^8.48.0",
+    "eslint-config-react-app": "^7.0.1",
+    "prettier": "^3.0.1"
   },
   "browserslist": {
     "production": [
@@ -50,9 +54,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "prettier": "^3.0.1"
   }
 }

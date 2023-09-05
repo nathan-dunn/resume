@@ -1,0 +1,10 @@
+{
+  "extends": ["react-app"],
+  "rules": {
+    "no-useless-concat": "off",
+    "no-useless-constructor": "off",
+    "eqeqeq": "off",
+    "no-unused-vars": "off",
+    "react/jsx-pascal-case": "off"
+  }
+}
