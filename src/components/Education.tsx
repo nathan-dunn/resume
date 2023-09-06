@@ -1,4 +1,3 @@
-import React from 'react';
 import { Text, UnorderedList, ListItem, VStack } from '@chakra-ui/react';
 import { SectionHeader, SectionHeaderMobile } from './SectionHeader';
 import { data } from '../config';

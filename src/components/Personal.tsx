@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, VStack, Text } from '@chakra-ui/react';
 import { SectionHeader, SectionHeaderMobile } from './SectionHeader';
 import { data } from '../config';
