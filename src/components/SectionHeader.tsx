@@ -9,7 +9,10 @@ interface SectionHeaderProps {
   color?: string;
 }
 
-export const SectionHeader = ({ title, color = colors.fc1 }: SectionHeaderProps): JSX.Element => {
+export const SectionHeader: React.FC<SectionHeaderProps> = ({
+  title,
+  color = colors.fc1,
+}) => {
   return (
     <Text
       mb={2}
@@ -24,10 +27,10 @@ export const SectionHeader = ({ title, color = colors.fc1 }: SectionHeaderProps)
   );
 };
 
-export const SectionHeaderMobile = ({
+export const SectionHeaderMobile: React.FC<SectionHeaderProps> = ({
   title,
   color = colors.fc1,
-}: SectionHeaderProps): JSX.Element => {
+}) => {
   return (
     <Box alignSelf="center">
       <Text

@@ -12,12 +12,12 @@ interface SectionDividerProps {
 }
 
 // can be used as a spacer -- don't pass in bg, and give it the my you want
-export const SectionDivider = ({
+export const SectionDivider: React.FC<SectionDividerProps> = ({
   bg = colors.bg2,
   my = 0.5,
   h = 1,
   w = '100%',
-}: SectionDividerProps): JSX.Element => {
+}) => {
   return (
     <Divider
       orientation="horizontal"

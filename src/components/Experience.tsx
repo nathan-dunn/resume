@@ -1,5 +1,12 @@
 import React from 'react';
-import { Flex, Text, ListItem, List, VStack, UnorderedList } from '@chakra-ui/react';
+import {
+  Flex,
+  Text,
+  ListItem,
+  List,
+  VStack,
+  UnorderedList,
+} from '@chakra-ui/react';
 import { SectionHeader, SectionHeaderMobile } from './SectionHeader';
 import { SectionDivider } from './SectionDivider';
 import { data, theme } from '../config';
@@ -10,7 +17,7 @@ interface BulletListProps {
   list: string[];
 }
 
-const BulletList = ({ list }: BulletListProps): JSX.Element => (
+const BulletList: React.FC<BulletListProps> = ({ list }) => (
   <UnorderedList pl={2}>
     {(list || []).map((str, index) => (
       <ListItem key={index} mb={0.5}>
@@ -34,8 +41,11 @@ export const Experience = () => {
       <List mt={1}>
         {data.experience.map((experience, experienceIndex) => {
           const fontWeight = 600;
-          const { employer, title, dates }: { employer: string; dates: string; title: string } =
-            experience;
+          const {
+            employer,
+            title,
+            dates,
+          }: { employer: string; dates: string; title: string } = experience;
 
           return (
             <ListItem
@@ -43,7 +53,11 @@ export const Experience = () => {
               pb={3}
               // border="1px solid darkblue"
             >
-              <Flex justify="space-between" fontSize={fonts.fs1} fontWeight={fontWeight}>
+              <Flex
+                justify="space-between"
+                fontSize={fonts.fs1}
+                fontWeight={fontWeight}
+              >
                 <Text letterSpacing="1px">{employer.toUpperCase()}</Text>
                 <Text>{dates}</Text>
               </Flex>
@@ -56,7 +70,8 @@ export const Experience = () => {
 
               <List>
                 {(experience.projects || []).map((project, projectIndex) => {
-                  const { name, role }: { name: string; role: string } = project;
+                  const { name, role }: { name: string; role: string } =
+                    project;
                   return (
                     <ListItem key={projectIndex} mb={4}>
                       <Flex mb={1}>
@@ -90,8 +105,11 @@ export const ExperienceMobile = () => {
       <List mt={1}>
         {data.experience.map((experience, experienceIndex) => {
           const fontWeight = 600;
-          const { employer, title, dates }: { employer: string; dates: string; title: string } =
-            experience;
+          const {
+            employer,
+            title,
+            dates,
+          }: { employer: string; dates: string; title: string } = experience;
 
           return (
             <ListItem
@@ -99,7 +117,11 @@ export const ExperienceMobile = () => {
               pb={3}
               // border="1px solid darkblue"
             >
-              <Flex justify="space-between" fontSize={fonts.fs1} fontWeight={fontWeight}>
+              <Flex
+                justify="space-between"
+                fontSize={fonts.fs1}
+                fontWeight={fontWeight}
+              >
                 <Text letterSpacing="1px">{employer.toUpperCase()}</Text>
                 <Text>{dates}</Text>
               </Flex>
@@ -112,7 +134,8 @@ export const ExperienceMobile = () => {
 
               <List>
                 {(experience.projects || []).map((project, projectIndex) => {
-                  const { name, role }: { name: string; role: string } = project;
+                  const { name, role }: { name: string; role: string } =
+                    project;
                   return (
                     <ListItem key={projectIndex} mb={4}>
                       <Flex mb={1}>

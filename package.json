@@ -10,7 +10,7 @@
     "resume": "NODE_ENV=production yarn build && surge --project ./build --domain https://nathan-dunn-resume.surge.sh/",
     "site": "NODE_ENV=production yarn build && surge --project ./build --domain https://nathan-dunn.surge.sh/",
     "draft": "NODE_ENV=production yarn build && surge --project ./build --domain https://nathan-dunn-draft.surge.sh/",
-    "lint": "eslint ."
+    "lint": "eslint src"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.8.0",
@@ -39,8 +39,10 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "eslint": "^8.48.0",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
     "eslint-config-react-app": "^7.0.1",
+    "eslint": "^8.48.0",
     "prettier": "^3.0.1"
   },
   "browserslist": {
