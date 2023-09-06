@@ -2,9 +2,9 @@
   "extends": ["react-app"],
   "rules": {
     "no-useless-concat": "off",
-    "no-useless-constructor": "off",
+    "no-useless-constructor": "warn",
     "eqeqeq": "off",
-    "no-unused-vars": "off",
+    "no-unused-vars": "warn",
     "react/jsx-pascal-case": "off"
   }
 }

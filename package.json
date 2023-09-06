@@ -10,7 +10,7 @@
     "resume": "NODE_ENV=production yarn build && surge --project ./build --domain https://nathan-dunn-resume.surge.sh/",
     "site": "NODE_ENV=production yarn build && surge --project ./build --domain https://nathan-dunn.surge.sh/",
     "draft": "NODE_ENV=production yarn build && surge --project ./build --domain https://nathan-dunn-draft.surge.sh/",
-    "lint": "npx eslint src"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@chakra-ui/react": "^2.8.0",
