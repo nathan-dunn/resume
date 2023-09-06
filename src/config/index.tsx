@@ -1,7 +1,7 @@
 import { MdOutlinePhoneIphone, MdEmail, MdLocationOn } from 'react-icons/md';
 import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
 import { extendTheme } from '@chakra-ui/react';
-import { mode } from '@chakra-ui/theme-tools';
+import { mode, GlobalStyleProps } from '@chakra-ui/theme-tools';
 
 // measurements
 const maxPageWidth = 738;
@@ -30,12 +30,24 @@ const fs2 = 14;
 
 export const theme = extendTheme({
   config: { initialColorMode: 'dark', useSystemColorMode: true },
-  settings: { maxPageWidth, minPageWidth, pageSplit, mobileThreshold, tabletThreshold },
+  settings: {
+    maxPageWidth,
+    minPageWidth,
+    pageSplit,
+    mobileThreshold,
+    tabletThreshold,
+  },
   colors: { chakraBlueGray, light, dark, tc1, tc2, bg1, bg2, fc1, fc2 },
   fonts: { ff1, ff2, fs1, fs2 },
-  breakpoints: { sm: '320px', md: '768px', lg: '960px', xl: '1200px', '2xl': '1536px' },
+  breakpoints: {
+    sm: '320px',
+    md: '768px',
+    lg: '960px',
+    xl: '1200px',
+    '2xl': '1536px',
+  },
   styles: {
-    global: (props: any) => ({
+    global: (props: GlobalStyleProps) => ({
       body: {
         bg: mode(light, dark)(props), // light mode, dark mode
         color: mode(dark, light)(props), // light mode, dark mode
@@ -44,7 +56,38 @@ export const theme = extendTheme({
   },
 });
 
-export const data = {
+export interface Contact {
+  icon: JSX.Element;
+  text: string;
+  link?: string;
+}
+
+interface ProjectDetail {
+  name: string;
+  role: string;
+  tech: string;
+  details: string[];
+}
+
+interface Data {
+  profile: {
+    title: string;
+    name: string;
+    photoFile: string;
+  };
+  contacts: Contact[];
+  skills: string[];
+  education: string[];
+  personal: string[];
+  experience: {
+    employer: string;
+    dates: string;
+    title: string;
+    projects: ProjectDetail[];
+  }[];
+}
+
+export const data: Data = {
   profile: {
     title: 'SENIOR SOFTWARE ENGINEER',
     name: 'NATHAN DUNN',
@@ -106,7 +149,6 @@ export const data = {
     'CSU Long Beach - M.S. Kinesiology',
     'CSU Long Beach - B.S. Kinesiology',
   ],
-
   personal: [
     `My professional experience has been mostly frontend development, however, I really enjoy working both sides of the stack.
     I get a great amount of satisfaction out of what some call the daily grind  💻  + ☕ = 🤩`,
@@ -117,7 +159,6 @@ export const data = {
 
     `I live outside Fort Worth with my wife, three young children, and our German Shepherd, Luna.`,
   ],
-
   experience: [
     {
       employer: 'Integrated Auction Solutions',

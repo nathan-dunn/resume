@@ -1,7 +1,5 @@
-import React from 'react';
 import { Stack, VStack, Image } from '@chakra-ui/react';
-import { data } from '../config';
-const { profile } = data;
+import profilePhoto from '../assets/profile.png';
 
 export const Photo = () => {
   return (
@@ -17,7 +15,7 @@ export const Photo = () => {
       <Image
         borderRadius="full"
         boxSize="145px"
-        src={require(`../assets/${profile.photoFile}`)}
+        src={profilePhoto}
         alt="profile"
         zIndex={5}
       />
@@ -38,7 +36,7 @@ export const PhotoMobile = () => {
       <Image
         borderRadius="full"
         boxSize="80px"
-        src={require(`../assets/${profile.photoFile}`)}
+        src={profilePhoto}
         alt="profile"
         zIndex={5}
       />

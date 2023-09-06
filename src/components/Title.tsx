@@ -1,4 +1,3 @@
-import React from 'react';
 import { Text, VStack } from '@chakra-ui/react';
 import { useWindowSize } from 'usehooks-ts';
 import { theme, data } from '../config';

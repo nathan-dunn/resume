@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { Box, Grid, Stack, HStack, VStack } from '@chakra-ui/react';
 import {
   Contact,
@@ -149,7 +149,13 @@ export const PageMobile = () => {
       >
         <HeaderMobile />
 
-        <VStack w="100%" align="center" justify="space-evenly" bg={colors.bg1} p={2}>
+        <VStack
+          w="100%"
+          align="center"
+          justify="space-evenly"
+          bg={colors.bg1}
+          p={2}
+        >
           <TitleMobile />
         </VStack>
 
@@ -167,7 +173,13 @@ export const PageMobile = () => {
         </Box>
         <SectionDivider w="90%" />
 
-        <HStack w="100%" align="flex-start" justify="space-evenly" px={6} py={2}>
+        <HStack
+          w="100%"
+          align="flex-start"
+          justify="space-evenly"
+          px={6}
+          py={2}
+        >
           <EducationMobile />
           {width >= settings.tabletThreshold && <PersonalMobile />}
         </HStack>

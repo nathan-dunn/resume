@@ -1,4 +1,3 @@
-import React from 'react';
 import { Flex, Box, Text, Link, VStack, HStack } from '@chakra-ui/react';
 import { useWindowSize } from 'usehooks-ts';
 import { SectionHeader } from './SectionHeader';
@@ -15,7 +14,7 @@ export const Contact = () => {
       // border="1px solid darkblue"
     >
       <SectionHeader title="CONTACT" />
-      {data.contacts.map((contact: any, index: number) => (
+      {data.contacts.map((contact, index: number) => (
         <Link
           key={index}
           href={contact.link}
@@ -53,7 +52,7 @@ export const ContactMobile = () => {
       // border="1px solid darkblue"
     >
       <VStack align="flex-start" spacing={0}>
-        {[...list1].map((contact: any, index: number) => (
+        {[...list1].map((contact, index: number) => (
           <Link
             key={index}
             href={contact.link}
@@ -73,7 +72,7 @@ export const ContactMobile = () => {
 
       {columns > 1 && (
         <VStack align="flex-start" spacing={0}>
-          {list2.map((contact: any, index: number) => (
+          {list2.map((contact, index: number) => (
             <Link
               key={index}
               href={contact.link}
