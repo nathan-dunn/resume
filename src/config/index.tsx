@@ -1,9 +1,4 @@
-import {
-  MdOutlinePhoneIphone,
-  MdEmail,
-  MdLocationOn,
-  MdLaptopMac,
-} from 'react-icons/md';
+import { MdEmail, MdLocationOn, MdLaptopMac } from 'react-icons/md';
 import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
 import { extendTheme } from '@chakra-ui/react';
 import { mode, GlobalStyleProps } from '@chakra-ui/theme-tools';
