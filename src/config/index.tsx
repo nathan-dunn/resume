@@ -1,4 +1,9 @@
-import { MdOutlinePhoneIphone, MdEmail, MdLocationOn } from 'react-icons/md';
+import {
+  MdOutlinePhoneIphone,
+  MdEmail,
+  MdLocationOn,
+  MdLaptopMac,
+} from 'react-icons/md';
 import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
 import { extendTheme } from '@chakra-ui/react';
 import { mode, GlobalStyleProps } from '@chakra-ui/theme-tools';
@@ -98,9 +103,14 @@ export const data: Data = {
       icon: <MdLocationOn />,
       text: `Weatherford, Texas`,
     },
+    // {
+    //   icon: <MdOutlinePhoneIphone />,
+    //   text: `(562) 234-2532`,
+    // },
     {
-      icon: <MdOutlinePhoneIphone />,
-      text: `(562) 234-2532`,
+      icon: <MdLaptopMac />,
+      text: `nathan-dunn.surge.sh`,
+      link: `https://nathan-dunn.surge.sh/`,
     },
     {
       icon: <MdEmail />,
@@ -145,7 +155,7 @@ export const data: Data = {
     'Jira / Monday',
   ],
   education: [
-    'Hack Reactor Software Engineering Bootcamp, Los Angeles 2017',
+    'Hack Reactor Software Engineering Bootcamp, Los Angeles',
     'CSU Long Beach - M.S. Kinesiology',
     'CSU Long Beach - B.S. Kinesiology',
   ],
@@ -154,8 +164,6 @@ export const data: Data = {
     I get a great amount of satisfaction out of what some call the daily grind  💻  + ☕ = 🤩`,
 
     `I always have a personal code project going and my free time is spent with my family, reading, working out, or taking online coding courses.`,
-
-    `I was a Police Officer in Long Beach, CA from 2004 to 2017`,
 
     `I live outside Fort Worth with my wife, three young children, and our German Shepherd, Luna.`,
   ],
