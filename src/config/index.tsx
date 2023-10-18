@@ -234,11 +234,5 @@ export const data: Data = {
         },
       ],
     },
-    // {
-    //   employer: 'Long Beach Police Department',
-    //   title: 'Police Officer',
-    //   dates: 'Jun 2004 - Mar 2017',
-    //   details: [`Medically retired in 2017`],
-    // },
   ],
 };
